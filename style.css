@@ -1,0 +1,160 @@
+html {
+    font-size: 1vw;
+}
+
+body {
+    font-family: input-mono, monospace;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.4rem 1rem 1.4rem
+}
+
+#canvasID {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    width: 16rem;
+}
+
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    height: calc(100vh - 2rem);
+    width: 18rem;
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    /* margin-bottom: 2rem; */
+}
+
+.numbers {
+    text-align: right;
+}
+
+.canvas {
+    margin-right: 1.4rem;
+}
+
+.legend,
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.source {
+    color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+a,
+a:hover,
+a:visited {
+    color: black;
+}
+
+p {
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.footer {
+    padding-bottom: 1.2rem;
+}
+
+.about {
+    padding-bottom: 1.3rem;
+    font-size: 0.8rem;
+    width: 20rem;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line img {
+    padding-right: 0.5rem;
+}
+
+
+
+.legend img {
+    width: 1rem;
+    height: 0.7rem;
+}
+
+
+#canvasID{
+    width:50%;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    body{
+        width: 100vw;
+    }
+
+    .legend img {
+        width: 1rem;
+        height: 0.7rem;
+    }
+
+    html {
+        font-size: 3vw;
+    }
+
+    .sidebar {
+        position: relative;
+        font-size: 0.8rem;
+        height: fit-content;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.4rem 1rem 1.4rem;
+    flex-direction: column;
+}
+
+    .canvas {
+        width: 100vw;
+    }
+
+
+    .line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .line img {
+        padding-right: 0.5rem;
+    }
+
+   
+}
