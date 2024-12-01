@@ -1,0 +1,198 @@
+{
+  "en": {
+    "alertText": "The war in Ukraine, started by Russian aggression, has taken countless lives. Behind every statistic is a story—of a woman, a man, a child.This project aims to visualise the profound loss brought by war. Please take a moment and proceed only when you feel ready. ",
+    "dataStory": "Data Story",
+    "about": "About",
+    "title": "The birdsong of sorrow<br><span style='margin-left: 310px'>above Ukraine</span>",
+    "leadText": "Please take a moment here. The following visualizations depict lives lost in the ongoing Russian invasion of Ukraine and may be emotionally challenging. Proceed only if you feel ready.",
+    "ending": "Day after day, the birds appear as the war continues. But may peace come soon, so that no more need to be drawn.",
+    "footer-title-methodology": "Methodology",
+    "footer-title-disclaimer": "Disclaimer",
+    "footer-title-sources": "Sources",
+    "footer-title-acknowledgments": "Acknowledgments",
+    "footer-title-contact": "Contact Us",
+    "footer-methodology": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-sources": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-acknowledgments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-contact": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "notes": [
+      {
+        "id": "note-01",
+        "subnote": "Early on the morning of February 24, 2022 Russia launched a full-scale invasion of Ukraine",
+        "month": "February",
+        "year": "2022",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "centered": true
+      },
+      {
+        "id": "note-02",
+        "subnote": "In April, the total number of people who died reached 5,000",
+        "month": "April",
+        "yPlacement": "bottom",
+        "xPlacement": "center",
+        "year": "2022",
+        "centered": true
+      },
+      {
+        "id": "story-01",
+        "note": "On the morning April 8, 2022, <span class='bird'></span> 71-year-old Tamara was at the Kramatorsk railway station with hundreds of others, waiting to evacuate. She planned to flee to Poland to reunite with her daughter when a missile strike hit the station, taking her life.",
+        "yPlacement": "middle",
+        "xPlacement": "left",
+        "month": "April",
+        "year": "2022",
+        "subnote": "At least 52 people, including five children, were killed and nearly 100 injured at the same attack.",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+
+      {
+        "id": "story-02",
+        "note": "On July 14, 2022, 4-year-old <span class='birdChild'></span>Liza Dmytriyeva, a girl with Down syndrome, was killed in a Russian missile strike in Vinnytsia while on her way to speech therapy. Her mother survived the attack.",
+        "month": "July",
+        "year": "2022",
+        "yPlacement": "middle",
+        "xPlacement": "right",
+        "subnote": "At least 23 people, including three children, were killed as Russian missiles struck Vinnytsia city center.",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-03",
+        "note": "On January 14, 2023, Maksym and Nataliia Shvets<span class='bird'></span><span class='birdOneWing'></span>died when a missile hit their home in Dnipro. Their daughter Anastasia, 23, survived, trapped under the rubble.",
+        "month": "January",
+        "year": "2023",
+        "yPlacement": "middle",
+        "xPlacement": "left",
+        "subnote": "The Russian attack on a 9-story residential building killed at least 46 people, and injured over 80.",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-04",
+        "note": "<span class='birdChild'></span>11-year-old Sofia Shulha and her 6-year-old brother, Mykhayl,<span class='birdChild'></span>were likely asleep when they lost their lives as Russian missiles struck their home in Uman at 4 a.m. on April 28, 2023.",
+        "month": "April",
+        "year": "2023",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "subnote": "The strike killed 23 civilians, including six children.",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-05",
+        "note": "Ukrainian writer<span class='bird'></span> Victoria Amelina, 37, and a war crimes researcher, was killed in a Russian missile strike on a pizza restaurant in Kramatorsk on June 27, 2023.",
+        "subnote": "The attack killed 13 people in total, including four children.",
+        "month": "June",
+        "year": "2023",
+        "yPlacement": "middle",
+        "xPlacement": "left",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-06",
+        "note": "Maksym and Alina Sirokurov<span class='bird'></span><span class='birdOneWing'></span> died on October 5, 2023, when a Russian missile struck the small village of Hroza. They leave behind two young sons, aged 2 and 4.",
+        "month": "October",
+        "year": "2023",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "subnote": "The missile strike in Hroza killed 59 people, a fifth of the village's population.",
+        "sourceText": "[N]",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-07",
+        "note": "In Lviv, a basketball player <span class='bird'></span>Viktor Kobzystyi, 44, was killed early on December 29, 2023, in a drone attack.",
+        "subnote": "The attack killed 58 people and injured 160, targeting Kyiv, Odesa, Kharkiv, and Lviv, and damaging civilian infrastructure, homes, and schools.",
+        "month": "December",
+        "year": "2023",
+        "yPlacement": "middle",
+        "xPlacement": "center"
+      }
+    ],
+    "months": [
+      { "label": "February", "year": "2022" },
+      { "label": "March", "year": "2022" },
+      { "label": "April", "year": "2022" },
+      { "label": "May", "year": "2022" },
+      { "label": "June", "year": "2022" },
+      { "label": "July", "year": "2022" },
+      { "label": "August", "year": "2022" },
+      { "label": "September", "year": "2022" },
+      { "label": "October", "year": "2022" },
+      { "label": "November", "year": "2022" },
+      { "label": "December", "year": "2022" },
+      { "label": "January", "year": "2023" },
+      { "label": "February", "year": "2023" },
+      { "label": "March", "year": "2023" },
+      { "label": "April", "year": "2023" },
+      { "label": "May", "year": "2023" },
+      { "label": "June", "year": "2023" },
+      { "label": "July", "year": "2023" },
+      { "label": "August", "year": "2023" },
+      { "label": "September", "year": "2023" },
+      { "label": "October", "year": "2023" },
+      { "label": "November", "year": "2023" },
+      { "label": "December", "year": "2023" },
+      { "label": "January", "year": "2024" },
+      { "label": "February", "year": "2024" },
+      { "label": "March", "year": "2024" },
+      { "label": "April", "year": "2024" },
+      { "label": "May", "year": "2024" },
+      { "label": "June", "year": "2024" },
+      { "label": "July", "year": "2024" },
+      { "label": "August", "year": "2024" }
+    ]
+  },
+  "ukr": {
+    "alertText": "Будь ласка, зупиніться...",
+    "dataStory": "Історія даних",
+    "about": "About",
+    "title": "Спів скорботи<br><span style='margin-left: 350px;'>над Україною</span>",
+    "leadText": "Lorem ipsum dolor sit amet...",
+    "notes": [
+      { "id": "note1", "text": "Примітка на січень", "x": 0, "y": 0 },
+      { "id": "note2", "text": "Важлива подія у березні", "x": 0, "y": 0 }
+    ],
+    "months": [
+      { "label": "Лютий", "year": "2022" },
+      { "label": "Березень" },
+      { "label": "Квітень" },
+      { "label": "Травень" },
+      { "label": "Червень" },
+      { "label": "Липень" },
+      { "label": "Серпень" },
+      { "label": "Вересень" },
+      { "label": "Жовтень" },
+      { "label": "Листопад" },
+      { "label": "Грудень" },
+      { "label": "Січень", "year": "2023" },
+      { "label": "Лютий" },
+      { "label": "Березень" },
+      { "label": "Квітень" },
+      { "label": "Травень" },
+      { "label": "Червень" },
+      { "label": "Липень" },
+      { "label": "Серпень" },
+      { "label": "Вересень" },
+      { "label": "Жовтень" },
+      { "label": "Листопад" },
+      { "label": "Грудень" },
+      { "label": "Січень", "year": "2024" },
+      { "label": "Лютий" }
+    ]
+  },
+  "ru": {
+    "alertText": "Пожалуйста, остановитесь...",
+    "dataStory": "История данных",
+    "about": "About",
+    "title": "Песнь печали<br><span style='margin-left: 350px;'>над Украиной</span>",
+    "leadText": "Lorem ipsum dolor sit amet...",
+    "notes": [
+      { "id": "note1", "text": "Примечание на январь", "x": 50, "y": 100 },
+      { "id": "note2", "text": "Важное событие в марте", "x": 50, "y": 300 }
+    ]
+  }
+}
