@@ -72,32 +72,45 @@ let sketchOne = function (p) {
   // Initialize birds
   function initializeBirds() {
     birds = [];
-
-    console.log('hh', exclusionZones);
     const topConstraint = monthHeight * 0.8;
 
     for (let i = 0; i < months.length; i++) {
       const totalBirds = p.int(csvData.getString(i, 'Killed')) || 0;
       const childrenKilled =
         p.int(csvData.getString(i, 'Children Killed')) || 0;
-
+      const highlightCount = p.int(csvData.getString(i, 'Highlighted')) || 0;
       const lowerLimit = i === 0 ? topConstraint : monthHeight * i;
       const upperLimit = lowerLimit + monthHeight;
 
       // Define Gaussian parameters for clustering birds
-      const yRangeCenter = (lowerLimit + upperLimit) / 1.9; // Center of the range
+      const yRangeCenter = (lowerLimit + upperLimit) / 2; // Center of the range
       const yRangeDeviation = (upperLimit - lowerLimit) / 4; // Spread
 
       const xRangeCenter = p.width / 2; // Center horizontally
       const xRangeDeviation = p.width / 4; // Spread
+
+      // Define a cluster center for highlighted birds
+      const clusterCenterX = p.random(xRangeCenter, xRangeCenter); // Small spread around x center
+      const clusterCenterY = p.random(yRangeCenter, yRangeCenter); // Small spread around y center
+      const clusterDeviation = 75; // Spread for highlighted birds
+
+      let highlightAssigned = 0;
 
       const monthBirds = Array.from({ length: totalBirds }, (_, birdIndex) => {
         let bird;
         do {
           let yPosition, xPosition;
 
-          if (totalBirds > 2000) {
-            // Use Gaussian distribution for placement
+          if (highlightAssigned < highlightCount) {
+            // Place highlighted birds near the cluster center
+            do {
+              yPosition = p.randomGaussian(clusterCenterY, clusterDeviation);
+              xPosition = p.randomGaussian(clusterCenterX, clusterDeviation);
+            } while (
+              isInsideExclusionZoneOrBuffer(xPosition, yPosition) !== 'none'
+            ); // Retry if inside exclusion zone
+          } else if (totalBirds > 2000) {
+            // Use Gaussian distribution for placement of other birds
             yPosition = p.randomGaussian(yRangeCenter, yRangeDeviation);
             xPosition = p.randomGaussian(xRangeCenter, xRangeDeviation);
           } else {
@@ -116,10 +129,20 @@ let sketchOne = function (p) {
             zoneStatus === 'none' ||
             (zoneStatus === 'buffer' && Math.random() < 0.3)
           ) {
+            let birdColor;
+
+            // Assign color based on type and highlight logic
+            if (highlightAssigned < highlightCount) {
+              birdColor = '#DFC282'; // Yellow color for highlighted birds
+              highlightAssigned++;
+            } else {
+              birdColor = birdIndex < childrenKilled ? '#7B86FF' : '#fff';
+            }
+
             bird = {
               x: xPosition,
               y: yPosition,
-              color: birdIndex < childrenKilled ? '#7B86FF' : '#fff',
+              color: birdColor,
             };
           }
         } while (!bird); // Retry until a valid position is found

@@ -1,4 +1,3 @@
-// Fetch the translation data and process both notes and months
 fetch('./assets/translations/translation.json')
   .then((response) => response.json())
   .then((translationData) => {
@@ -21,16 +20,18 @@ fetch('./assets/translations/translation.json')
         ? `${month.label} ${month.year}`
         : `${month.label}`;
       const monthTop = monthTopPadding + index * monthHeight; // Top position of the month
-      const monthMiddle = monthTop + monthHeight / 3; // Middle position of the month
+      const monthMiddle = monthTop + monthHeight / 2; // Middle position of the month
+      const monthMiddleBottom = monthTop + monthHeight / 1.5;
       const monthBottom = monthTop + monthHeight; // Bottom position of the month
       monthPositions[monthKey] = {
         index,
         top: monthTop,
         middle: monthMiddle,
+        middleBottom: monthMiddleBottom,
         bottom: monthBottom,
       };
 
-      // Create month label elements (existing code)
+      // Create month label elements
       const monthElement = document.createElement('div');
       monthElement.className = 'month-label'; // Base class for month labels
       monthElement.innerHTML = monthKey;
@@ -61,6 +62,9 @@ fetch('./assets/translations/translation.json')
               break;
             case 'bottom':
               yPosition = monthPosition.bottom;
+              break;
+            case 'middleBottom':
+              yPosition = monthPosition.middleBottom;
               break;
             case 'middle':
             default:
@@ -118,8 +122,22 @@ fetch('./assets/translations/translation.json')
       if (noteData.subnote) {
         const subnoteElement = document.createElement('div');
         subnoteElement.className = 'subnote';
-        subnoteElement.style.maxWidth = noteData.centered ? '16rem' : '22rem';
+        subnoteElement.style.maxWidth = noteData.centered ? '22rem' : '22rem';
         subnoteElement.innerHTML = noteData.subnote;
+
+        // Add the source link if it exists
+        if (noteData.sourceText && noteData.sourceLink) {
+          const spaceTextNode = document.createTextNode(' '); // Create a space outside the <a>
+          const sourceElement = document.createElement('a');
+          sourceElement.href = noteData.sourceLink;
+          sourceElement.target = '_blank';
+          sourceElement.rel = 'noopener noreferrer';
+          sourceElement.innerText = noteData.sourceText;
+
+          subnoteElement.appendChild(spaceTextNode); // Append space first
+          subnoteElement.appendChild(sourceElement); // Append the <a> element
+        }
+
         storyElement.appendChild(subnoteElement);
       }
 

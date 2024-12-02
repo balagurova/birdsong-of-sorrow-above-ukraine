@@ -280,9 +280,11 @@ section{
 
 a{
   text-decoration: none;
+  opacity: 0.7;
+  font-size: 14px;
   color: inherit;
-  font-family: "proxima-nova", sans-serif;
-  letter-spacing: 0.03em;
+  border-bottom: 1px solid #ffffff6b;
+  font-family: "calluna-sans", sans-serif;
 }
 
 

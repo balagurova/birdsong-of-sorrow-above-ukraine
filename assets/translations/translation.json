@@ -22,18 +22,101 @@
         "subnote": "Early on the morning of February 24, 2022 Russia launched a full-scale invasion of Ukraine",
         "month": "February",
         "year": "2022",
-        "yPlacement": "middle",
+        "yPlacement": "middleBottom",
         "xPlacement": "center",
         "centered": true
       },
       {
-        "id": "note-02",
-        "subnote": "In April, the total number of people who died reached 5,000",
-        "month": "April",
+        "id": "note-03",
+        "subnote": "By June 2022, over 1,000 children had lost their lives",
+        "month": "June",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "year": "2022",
+        "centered": true
+      },
+      {
+        "id": "note-04",
+        "subnote": "In August 2022, the total number of people who died reached 7000",
+        "month": "August",
         "yPlacement": "bottom",
         "xPlacement": "center",
         "year": "2022",
         "centered": true
+      },
+      {
+        "id": "note-06",
+        "subnote": "By March 2022, 4289 people, including 511 children, lost their lives",
+        "month": "April",
+        "yPlacement": "top",
+        "xPlacement": "center",
+        "year": "2022",
+        "centered": true
+      },
+      {
+        "id": "note-07",
+        "subnote": "In November 2022, the total number of people who died reached 8000",
+        "month": "November",
+        "yPlacement": "bottom",
+        "xPlacement": "center",
+        "year": "2022",
+        "centered": true
+      },
+      {
+        "id": "note-08",
+        "subnote": "By November 2023, the total number of people who died reached 10 226",
+        "month": "November",
+        "yPlacement": "middleBottom",
+        "xPlacement": "center",
+        "year": "2023",
+        "centered": true
+      },
+      {
+        "id": "note-09",
+        "subnote": "By May 2023, more than 1500 children had died, bringing the total death toll to 9281 people.",
+        "month": "May",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "year": "2023",
+        "centered": true
+      },
+      {
+        "id": "note-10",
+        "subnote": "By May 2024, more than 1900 children had died, bringing the total death toll above 11 000 people.",
+        "month": "May",
+        "yPlacement": "bottom",
+        "xPlacement": "center",
+        "year": "2024",
+        "centered": true
+      },
+      {
+        "id": "note-11",
+        "subnote": "As of October 2024, the last available number shows that 12,016 lives have been lost.",
+        "month": "October",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "year": "2024",
+        "centered": true
+      },
+      {
+        "id": "note-12",
+        "subnote": "In August 2023, 30 children lost their lives during the ongoing war.",
+        "month": "August",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "year": "2023",
+        "centered": true
+      },
+      {
+        "id": "note-13",
+        "subnote": "By April 2024, the World Health Organization verified 1,682 attacks on medical facilities, causing 128 deaths and 288 injuries.",
+        "month": "April",
+        "yPlacement": "middle",
+        "xPlacement": "center",
+        "year": "2024",
+        "centered": true,
+        "sourceText": "(WHO)",
+        "sourceLink": "https://www.who.int/ukraine/news/item/04-04-2024-triple-risk-of-harm-for-ukraine-s-health-transport-workers-over-other-health-care-staff--who-data-indicates"
       },
       {
         "id": "story-01",
@@ -46,7 +129,6 @@
         "sourceText": "[N]",
         "sourceLink": "http://google.com"
       },
-
       {
         "id": "story-02",
         "note": "On July 14, 2022, 4-year-old <span class='birdChild'></span>Liza Dmytriyeva, a girl with Down syndrome, was killed in a Russian missile strike in Vinnytsia while on her way to speech therapy. Her mother survived the attack.",
@@ -60,7 +142,7 @@
       },
       {
         "id": "story-03",
-        "note": "On January 14, 2023, Maksym and Nataliia Shvets<span class='bird'></span><span class='birdOneWing'></span>died when a missile hit their home in Dnipro. Their daughter Anastasia, 23, survived, trapped under the rubble.",
+        "note": "On January 14, 2023, Maksym and Nataliia Shvets <span class='bird'></span><span class='birdOneWing'></span>died when a missile hit their home in Dnipro. Their daughter Anastasia, 23, survived, trapped under the rubble.",
         "month": "January",
         "year": "2023",
         "yPlacement": "middle",
@@ -75,7 +157,7 @@
         "month": "April",
         "year": "2023",
         "yPlacement": "middle",
-        "xPlacement": "center",
+        "xPlacement": "right",
         "subnote": "The strike killed 23 civilians, including six children.",
         "sourceText": "[N]",
         "sourceLink": "http://google.com"
@@ -93,14 +175,14 @@
       },
       {
         "id": "story-06",
-        "note": "Maksym and Alina Sirokurov<span class='bird'></span><span class='birdOneWing'></span> died on October 5, 2023, when a Russian missile struck the small village of Hroza. They leave behind two young sons, aged 2 and 4.",
+        "note": "Maksym and Alina Sirokurov <span class='bird'></span><span class='birdOneWing'></span> died on October 5, 2023, when a Russian missile struck the small village of Hroza. They leave behind two young sons, aged 2 and 4.",
         "month": "October",
         "year": "2023",
         "yPlacement": "middle",
         "xPlacement": "center",
         "subnote": "The missile strike in Hroza killed 59 people, a fifth of the village's population.",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "sourceText": "UNHCR",
+        "sourceLink": "https://www.unhcr.org/ua/en/64179-psycosocial-support-in-hroza-village.html"
       },
       {
         "id": "story-07",
@@ -109,7 +191,40 @@
         "month": "December",
         "year": "2023",
         "yPlacement": "middle",
-        "xPlacement": "center"
+        "xPlacement": "center",
+        "sourceText": "TBA",
+        "sourceLink": "http://google.com"
+      },
+      {
+        "id": "story-09",
+        "note": "On July 8, 2024, the Okhmatdyt Children's Hospital, the largest pediatric hospital in Kyiv, came under attack. More than 300 people were injured, including eight children,<br>and <span class='bird'></span><span class='birdOneWing'></span> two adults, including a doctor, lost their lives. <a href='https://www.nytimes.com/2024/07/09/world/europe/ukraine-childrens-hospial-russia.html '>(New York Times)</a>",
+        "subnote": "",
+        "month": "July",
+        "year": "2024",
+        "yPlacement": "middle",
+        "xPlacement": "left"
+      },
+      {
+        "id": "story-10",
+        "note": "On March 2, 2024, a Russian drone struck a nine-story residential building in Odesa. Anna Gaidarzhi and her four-month-old son, Tymofii, <span class='bird'></span><span class='birdChild'></span> were found in the basement, buried under rubble after the upper floors collapsed. Anna’s husband, Serhii, and their three-year-old daughter, Lizzi, survived.",
+        "subnote": "According to the UN, the attack killed five children, most under the age of three, making it the deadliest incident for children in over nine months.",
+        "month": "March",
+        "year": "2024",
+        "yPlacement": "top",
+        "xPlacement": "right",
+        "sourceText": "(Human Rights Warch)",
+        "sourceLink": "https://www.hrw.org/news/2024/03/21/drone-attack-collapses-odesa-residential-building"
+      },
+      {
+        "id": "story-10",
+        "note": "On September 19, 2024, a Russian GPS-guided bomb struck Sumy’s care facility for the elderly. A 78-year-old woman <span class='bird'></span> was killed, and 12 others were injured in the attack.",
+        "subnote": "The Russian strike injured 12 people and caused significant destruction. The facility was home to 230 elderly residents and 60 staff members.",
+        "month": "September",
+        "year": "2024",
+        "yPlacement": "top",
+        "xPlacement": "right",
+        "sourceText": "The Times",
+        "sourceLink": "https://www.thetimes.com/world/russia-ukraine-war/article/the-russians-want-to-kill-us-all-tales-of-a-fireman-in-ukraine-5x3v8rr85?utm_source=chatgpt.com&region=global"
       }
     ],
     "months": [
@@ -143,7 +258,9 @@
       { "label": "May", "year": "2024" },
       { "label": "June", "year": "2024" },
       { "label": "July", "year": "2024" },
-      { "label": "August", "year": "2024" }
+      { "label": "August", "year": "2024" },
+      { "label": "September", "year": "2024" },
+      { "label": "October", "year": "2024" }
     ]
   },
   "ukr": {
