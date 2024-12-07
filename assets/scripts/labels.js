@@ -58,7 +58,7 @@ fetch('./assets/translations/translation.json')
           // Determine yPosition based on yPlacement
           switch (noteData.yPlacement) {
             case 'top':
-              yPosition = monthPosition.top;
+              yPosition = monthPosition.top + 120;
               break;
             case 'bottom':
               yPosition = monthPosition.bottom;

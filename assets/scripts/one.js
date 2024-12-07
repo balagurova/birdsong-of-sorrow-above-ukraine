@@ -102,7 +102,7 @@ let sketchOne = function (p) {
       // Define a cluster center for highlighted birds
       const clusterCenterX = p.random(xRangeCenter, xRangeCenter); // Small spread around x center
       const clusterCenterY = p.random(yRangeCenter, yRangeCenter); // Small spread around y center
-      const clusterDeviation = 75; // Spread for highlighted birds
+      const clusterDeviation = 100; // Spread for highlighted birds
 
       let highlightAssigned = 0;
 
@@ -114,7 +114,10 @@ let sketchOne = function (p) {
             // Place highlighted birds near the cluster center
             do {
               yPosition = p.randomGaussian(clusterCenterY, clusterDeviation);
-              xPosition = p.randomGaussian(clusterCenterX, clusterDeviation);
+              xPosition = p.randomGaussian(
+                clusterCenterX * 1.2,
+                clusterDeviation
+              );
             } while (
               isInsideExclusionZoneOrBuffer(xPosition, yPosition) !== 'none' ||
               xPosition < xPadding ||

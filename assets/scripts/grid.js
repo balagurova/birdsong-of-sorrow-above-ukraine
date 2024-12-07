@@ -1,28 +1,32 @@
 window.gridDone = false;
 
-let sketchGrid = function(p) {
+let sketchGrid = function (p) {
   let cols, rows;
   let months = [];
-  let squareSize;           
-  let canvasMargin = 80;    
-  let squareSpacing = 32;  
+  let squareSize;
+  let canvasMargin = 80;
+  let squareSpacing = 32;
   let canvasHeight;
   let img; // Variable to hold the image
 
-  p.preload = function() {
+  p.preload = function () {
     font = p.loadFont('./assets/fonts/opensans.ttf');
     font2 = p.loadFont('./assets/fonts/Sebastian Bobby.otf');
-    csvData = p.loadTable('./assets/data/civilian_casualties.csv', 'csv', 'header');
+    csvData = p.loadTable(
+      './assets/data/civilian_casualties.csv',
+      'csv',
+      'header'
+    );
     img = p.loadImage('./assets/images/bg.png'); // Load the image
   };
 
-  p.setup = function() {
+  p.setup = function () {
     for (let i = 0; i < csvData.getRowCount(); i++) {
       let month = csvData.getString(i, 'Month');
       let totalBirds = p.int(csvData.getString(i, 'Killed'));
       months.push({ month, totalBirds });
     }
-p.pixelDensity(4);
+    p.pixelDensity(4);
     adjustGridLayout();
     p.createCanvas(p.windowWidth, canvasHeight, p.WEBGL);
     p.angleMode(p.DEGREES);
@@ -31,7 +35,7 @@ p.pixelDensity(4);
     initializeBirds();
   };
 
-  p.draw = function() {
+  p.draw = function () {
     p.background('#F9EFE9');
 
     // Draw the birds and text
@@ -65,19 +69,19 @@ p.pixelDensity(4);
 
   function adjustGridLayout() {
     if (p.windowWidth > 800) {
-      cols = 4;  
+      cols = 4;
     } else if (p.windowWidth > 500) {
-      cols = 2; 
+      cols = 2;
     } else {
-      cols = 1;  
+      cols = 1;
     }
 
     rows = p.ceil(months.length / cols);
 
-    let totalHorizontalSpace = canvasMargin + (squareSpacing * (cols - 1));
+    let totalHorizontalSpace = canvasMargin + squareSpacing * (cols - 1);
     squareSize = (p.windowWidth - totalHorizontalSpace) / cols;
 
-    let totalVerticalSpace = canvasMargin + (squareSpacing * (rows - 1));
+    let totalVerticalSpace = canvasMargin + squareSpacing * (rows - 1);
     canvasHeight = rows * squareSize + totalVerticalSpace;
 
     document.getElementById('grid').style.height = `${canvasHeight}px`;
@@ -97,8 +101,8 @@ p.pixelDensity(4);
       birds.push(monthBirds);
     }
   }
-  
-  p.windowResized = function() {
+
+  p.windowResized = function () {
     adjustGridLayout();
     p.resizeCanvas(p.windowWidth, canvasHeight);
     p.redraw();

@@ -8,6 +8,7 @@
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/bird.js"></script>
     <script src="./assets/scripts/intro.js"></script>
+    <script src="./assets/scripts/legend.js"></script>
     <script src="./assets/scripts/outro.js"></script>
 </head>
 <body>
@@ -36,6 +37,14 @@
           </svg>
         </div> 
       </section>
+        <div class="how-to-read">
+          <div class="timeline subnote">Time flows from top to bottom, divided into monthly periods</div>
+          <div id="legend">
+            <div class="note" id="legendNote01">Each bird represents a life lost.</div>
+            <div class="note" id="legendNote02"><span class="birdChild" style="margin-right: 4px;"></span>Light blue birds signify children lost.</div>
+
+          </div>
+        </div>
       <div>
         <button id="btnOne" class="btn-segment active underline-animation hand-drawn-underline" onclick="switchScript('one')">All at Once</button>
         <button id="btnGrid" class="btn-segment" onclick="switchScript('grid')">Month by month</button>
@@ -83,19 +92,22 @@
 
   <script>
     let sketchesCompleted = false;
+    let icount = 0;
 
-    function sketchCompleted() {
-        sketchesCompleted = true;
-      if (sketchesCompleted === true) {
-        document.getElementById('loadingScreen').style.display = 'none';
-        new p5((p) => intro(p, 'alert-canvas', 10), 'alert-canvas');
-        new p5((p) => outro(p, 'ending-canvas', 50), 'ending-canvas');
-        new p5((p) => intro(p, 'footer-canvas', 3), 'footer-canvas');
+    let alertSketch, endingSketch, footerSketch, legendSketch;
 
-        
-      }
-      
-    }
+function sketchCompleted() {
+    if (sketchesCompleted) return;
+    sketchesCompleted = true;
+
+    document.getElementById('loadingScreen').style.display = 'none';
+
+    // Reuse or create sketches
+    alertSketch = alertSketch || new p5((p) => intro(p, 'alert-canvas', 10), 'alert-canvas');
+    endingSketch = endingSketch || new p5((p) => outro(p, 'ending-canvas', 50), 'ending-canvas');
+    footerSketch = footerSketch || new p5((p) => intro(p, 'footer-canvas', 3), 'footer-canvas');
+    legendSketch = legendSketch || new p5((p) => legend(p, 'legend', 7), 'legend');
+}
 
      // Tab switcher
 

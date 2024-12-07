@@ -43,8 +43,8 @@ font-style: normal;
   left: 0;
   top: 60%;
   transform: translateY(-60%);
-  width: 20px; /* Width of the bird image */
-  height: 20px; /* Height of the bird image */
+  width: 24px; /* Width of the bird image */
+  height: 24px; /* Height of the bird image */
   background-image: url('./assets/images/bird-2.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
@@ -56,8 +56,8 @@ font-style: normal;
   left: 0;
   top: 60%;
   transform: translateY(-60%);
-  width: 20px; /* Width of the bird image */
-  height: 20px; /* Height of the bird image */
+  width: 24px; /* Width of the bird image */
+  height: 24px; /* Height of the bird image */
   background-image: url('./assets/images/bird-child-2.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
@@ -255,7 +255,7 @@ body{
 
 h1{
 font-family: titleFont, serif;
-font-size: 210px;
+font-size: 200px;
 font-style: normal;
 font-weight: 400;
 line-height: 160px; 
@@ -375,6 +375,8 @@ a{
   top: 0;
   height: 100vh;
   width: 100vw;
+  pointer-events: none;
+
 }
 
 .scroll{
@@ -406,3 +408,47 @@ a{
   text-decoration-color: #202297;   
 }
 
+
+
+/* legens */
+
+.how-to-read {
+  width: 100%;
+  position: relative;
+  height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.how-to-read .timeline {
+  max-width: 160px;
+ margin-right: 10px;
+  color: #202297;
+  text-align: right;
+  margin-left: -220px;
+
+}
+
+.how-to-read #legend {
+  position: relative;
+  height: 200px;
+  width: 600px;
+  background: url('assets/images/legend-blue.png');
+  background-size: cover;
+}
+.how-to-read #legend .note {
+  position: absolute;
+  font-size: 18px;
+}
+
+#legendNote01{
+  top: 30%;
+  left: 10%;
+}
+#legendNote02{
+  top: 70%;
+  left: 45%;
+}

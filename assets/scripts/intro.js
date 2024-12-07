@@ -6,7 +6,7 @@ let intro = function (p, containerId, n) {
     const canvasContainer = document.getElementById(containerId);
     const canvasWidth = canvasContainer.clientWidth;
     const canvasHeight = canvasContainer.clientHeight;
-    p.createCanvas(canvasWidth, canvasHeight);
+    p.createCanvas(canvasWidth, canvasHeight, p.SVG);
   };
 
   p.draw = function () {

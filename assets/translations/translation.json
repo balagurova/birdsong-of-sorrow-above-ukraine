@@ -1,11 +1,11 @@
 {
   "en": {
-    "alertText": "The war in Ukraine, started by Russian aggression, has taken countless lives. Behind every statistic is a story—of a woman, a man, a child.This project aims to visualise the profound loss brought by war. Please take a moment and proceed only when you feel ready. ",
+    "alertText": "The war in Ukraine, started by Russian aggression, has taken countless lives. Behind every statistic is a story—of a woman, a man, a child. This project aims to visualise the profound loss brought by war. Please take a moment and proceed only when you feel ready. ",
     "dataStory": "Data Story",
     "about": "About",
     "title": "The birdsong of sorrow<br><span style='margin-left: 310px'>above Ukraine</span>",
     "leadText": "Please take a moment here. The following visualizations depict lives lost in the ongoing Russian invasion of Ukraine and may be emotionally challenging. Proceed only if you feel ready.",
-    "ending": "Day after day, the birds appear as the war continues. But may peace come soon, so that no more need to be drawn.",
+    "ending": "Day by day, the war continues, and birds appear on the canvas, reflecting lives lost. Even one is too many. This must end.",
     "footer-title-methodology": "Methodology",
     "footer-title-disclaimer": "Disclaimer",
     "footer-title-sources": "Sources",
@@ -46,12 +46,14 @@
       },
       {
         "id": "note-06",
-        "subnote": "By March 2022, 4289 people, including 511 children, lost their lives",
+        "subnote": "By March 2022, 4,289 people, including 511 children, lost their lives, with devastating attacks across Ukraine, including in Bucha, Mariupol, and Irpin.</br>",
         "month": "April",
         "yPlacement": "top",
         "xPlacement": "center",
         "year": "2022",
-        "centered": true
+        "centered": true,
+        "sourceText": "(Monthly data comes from the UN Human Rights Office)",
+        "sourceLink": "https://ukraine.un.org/sites/default/files/2024-02/22%20Feb%202024%20Protection%20of%20Civilians_impact%20of%20hostilites%20on%20civilians%20since%2024%20Feb%202022_HRMMU%20report_ENG.pdf"
       },
       {
         "id": "note-07",
@@ -121,13 +123,13 @@
       {
         "id": "story-01",
         "note": "On the morning April 8, 2022, <span class='bird'></span> 71-year-old Tamara was at the Kramatorsk railway station with hundreds of others, waiting to evacuate. She planned to flee to Poland to reunite with her daughter when a missile strike hit the station, taking her life.",
-        "yPlacement": "middle",
+        "yPlacement": "middleBottom",
         "xPlacement": "left",
         "month": "April",
         "year": "2022",
-        "subnote": "At least 52 people, including five children, were killed and nearly 100 injured at the same attack.",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "subnote": "At least 52 people, including five children, were killed and nearly 100 injured at the same attack.</br>",
+        "sourceText": "(Human Rights Warch)",
+        "sourceLink": "https://www.hrw.org/video-photos/interactive/2023/02/21/death-at-the-station/russian-cluster-munition-attack-in-kramatorsk"
       },
       {
         "id": "story-02",
@@ -137,19 +139,16 @@
         "yPlacement": "middle",
         "xPlacement": "right",
         "subnote": "At least 23 people, including three children, were killed as Russian missiles struck Vinnytsia city center.",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "sourceText": "(BBC)",
+        "sourceLink": "https://www.bbc.com/news/world-europe-62181726"
       },
       {
         "id": "story-03",
-        "note": "On January 14, 2023, Maksym and Nataliia Shvets <span class='bird'></span><span class='birdOneWing'></span>died when a missile hit their home in Dnipro. Their daughter Anastasia, 23, survived, trapped under the rubble.",
+        "note": "On January 14, 2023, a Russian missile struck a 9-story residential building in Dnipro, killing at least 40 people, including three children, and injuring over 75. <a href='https://news.un.org/en/story/2023/01/1132492'>(United Nations)</a>",
         "month": "January",
         "year": "2023",
         "yPlacement": "middle",
-        "xPlacement": "left",
-        "subnote": "The Russian attack on a 9-story residential building killed at least 46 people, and injured over 80.",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "xPlacement": "right"
       },
       {
         "id": "story-04",
@@ -186,12 +185,11 @@
       },
       {
         "id": "story-07",
-        "note": "In Lviv, a basketball player <span class='bird'></span>Viktor Kobzystyi, 44, was killed early on December 29, 2023, in a drone attack.",
-        "subnote": "The attack killed 58 people and injured 160, targeting Kyiv, Odesa, Kharkiv, and Lviv, and damaging civilian infrastructure, homes, and schools.",
+        "note": "On December 29, 2023, the attack killed 58 people and injured 160, targeting Kyiv, Odesa, Kharkiv, and Lviv, and damaging civilian infrastructure, homes, and schools.",
         "month": "December",
         "year": "2023",
         "yPlacement": "middle",
-        "xPlacement": "center",
+        "xPlacement": "right",
         "sourceText": "TBA",
         "sourceLink": "http://google.com"
       },
