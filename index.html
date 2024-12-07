@@ -11,7 +11,6 @@
     <script src="./assets/scripts/outro.js"></script>
 </head>
 <body>
-    <div class="noise"></div>
     <div id="loadingScreen">
       <p class="caption">Loading...</p>
   </div>
@@ -70,11 +69,16 @@
 
   <!-- Include p5.js library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+
   <!-- Include the sketch scripts -->
   <script src="./assets/translations/translation.json"></script>
   <script src="./assets/scripts/labels.js"></script>
   <script type="module" src="./assets/scripts/one.js"></script>
   <script src="./assets/scripts/grid.js"></script>
+
+
+
 
 
   <script>
@@ -84,12 +88,13 @@
         sketchesCompleted = true;
       if (sketchesCompleted === true) {
         document.getElementById('loadingScreen').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'flex';
         new p5((p) => intro(p, 'alert-canvas', 10), 'alert-canvas');
         new p5((p) => outro(p, 'ending-canvas', 50), 'ending-canvas');
         new p5((p) => intro(p, 'footer-canvas', 3), 'footer-canvas');
+
         
       }
+      
     }
 
      // Tab switcher
@@ -99,6 +104,7 @@
   const oneElement = document.getElementById('one');
   const btnGrid = document.getElementById('btnGrid');
   const btnOne = document.getElementById('btnOne');
+
 
   const classesToToggle = ['active', 'underline-animation', 'hand-drawn-underline'];
 

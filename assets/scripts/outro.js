@@ -1,22 +1,21 @@
 let outro = function (p, containerId, n) {
   let birdsDrawn = 0;
   let birdPositions = [];
-  const gridCols = 4; 
-  const gridRows = 3; 
-
+  const gridCols = 4;
+  const gridRows = 3;
 
   const regionWeights = {
-    3: 5,  
-    4: 5,  
-    6: 1,  
-    7: 4,  
-    10: 2,  
-    11: 5, 
-    12: 1,  
+    3: 5,
+    4: 5,
+    6: 1,
+    7: 4,
+    10: 2,
+    11: 5,
+    12: 1,
   };
 
-  const weightedRegions = Object.entries(regionWeights).flatMap(([region, weight]) =>
-    Array(weight).fill(parseInt(region))
+  const weightedRegions = Object.entries(regionWeights).flatMap(
+    ([region, weight]) => Array(weight).fill(parseInt(region))
   );
 
   p.setup = function () {
@@ -42,15 +41,14 @@ let outro = function (p, containerId, n) {
     const cellWidth = canvasWidth / gridCols;
     const cellHeight = canvasHeight / gridRows;
 
-    const col = (region - 1) % gridCols; 
-    const row = Math.floor((region - 1) / gridCols); 
+    const col = (region - 1) % gridCols;
+    const row = Math.floor((region - 1) / gridCols);
 
     return {
       x: p.random(col * cellWidth, (col + 1) * cellWidth),
       y: p.random(row * cellHeight, (row + 1) * cellHeight),
     };
   }
-
 
   function isOverlapping(x, y) {
     return birdPositions.some(
@@ -60,9 +58,8 @@ let outro = function (p, containerId, n) {
 
   function drawBird(x, y, p) {
     const size = p.random(10, 30);
-    p.fill('#202297');
     p.noStroke();
-    BirdShapes.bird(p, x, y, size, '#202297');
+    BirdShapes.bird(p, x, y, size, '#424992');
     birdPositions.push({ x, y, size });
   }
 };

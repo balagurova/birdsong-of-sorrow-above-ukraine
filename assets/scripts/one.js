@@ -1,11 +1,19 @@
 let sketchOne = function (p) {
   let monthHeight = 400;
+  const xPadding = 30; // Padding from the left and right edges
   let font, csvData;
   let birds = [];
   let months = [];
   let exclusionZones = [];
+  let images = []; // Array to hold images
 
   p.preload = function () {
+    for (let i = 1; i <= 12; i++) {
+      let filename = i.toString().padStart(2, '0') + '.png'; // Generate '01.png', '02.png', etc.
+      let path = `./assets/images/bg/${filename}`;
+      images.push(p.loadImage(path));
+    }
+
     csvData = p.loadTable(
       './assets/data/civilian_casualties.csv',
       'csv',
@@ -18,7 +26,6 @@ let sketchOne = function (p) {
 
     // Get the div with ID 'one'
     let container = document.getElementById('one');
-    console.log(container.offsetWidth);
     // Check if the container exists
     if (container) {
       let canvasWidth = container.offsetWidth;
@@ -80,7 +87,10 @@ let sketchOne = function (p) {
         p.int(csvData.getString(i, 'Children Killed')) || 0;
       const highlightCount = p.int(csvData.getString(i, 'Highlighted')) || 0;
       const lowerLimit = i === 0 ? topConstraint : monthHeight * i;
-      const upperLimit = lowerLimit + monthHeight;
+      const upperLimit =
+        i === months.length - 1
+          ? lowerLimit + monthHeight * 0.9
+          : lowerLimit + monthHeight;
 
       // Define Gaussian parameters for clustering birds
       const yRangeCenter = (lowerLimit + upperLimit) / 2; // Center of the range
@@ -100,23 +110,29 @@ let sketchOne = function (p) {
         let bird;
         do {
           let yPosition, xPosition;
-
           if (highlightAssigned < highlightCount) {
             // Place highlighted birds near the cluster center
             do {
               yPosition = p.randomGaussian(clusterCenterY, clusterDeviation);
               xPosition = p.randomGaussian(clusterCenterX, clusterDeviation);
             } while (
-              isInsideExclusionZoneOrBuffer(xPosition, yPosition) !== 'none'
-            ); // Retry if inside exclusion zone
+              isInsideExclusionZoneOrBuffer(xPosition, yPosition) !== 'none' ||
+              xPosition < xPadding ||
+              xPosition > p.width - xPadding // Ensure xPosition stays within padding
+            );
           } else if (totalBirds > 2000) {
             // Use Gaussian distribution for placement of other birds
-            yPosition = p.randomGaussian(yRangeCenter, yRangeDeviation);
-            xPosition = p.randomGaussian(xRangeCenter, xRangeDeviation);
+            do {
+              yPosition = p.randomGaussian(yRangeCenter, yRangeDeviation);
+              xPosition = p.randomGaussian(xRangeCenter, xRangeDeviation);
+            } while (
+              xPosition < xPadding ||
+              xPosition > p.width - xPadding // Ensure xPosition stays within padding
+            );
           } else {
             // Use uniform random placement for fewer birds
             yPosition = p.random(lowerLimit, upperLimit);
-            xPosition = p.random(0, p.width);
+            xPosition = p.random(xPadding, p.width - xPadding);
           }
 
           const zoneStatus = isInsideExclusionZoneOrBuffer(
@@ -157,9 +173,19 @@ let sketchOne = function (p) {
   p.draw = function () {
     p.translate(-p.width / 2, -p.height / 2);
 
-    // Background
-    p.fill('#424992');
-    p.rect(0, 0, p.width, p.height);
+    let y = 0; // Starting y-coordinate
+    let imageIndex = 0;
+
+    images.forEach((img) => {
+      // Calculate the height to maintain the aspect ratio
+      let scaledHeight = Math.round((img.height / img.width) * p.width); // Round to the nearest integer
+
+      // Draw the image at the calculated position and size
+      p.image(img, 0, y, p.width, scaledHeight);
+
+      // Update y-coordinate for the next image
+      y += scaledHeight - 10; // Subtract 5 for overlap if needed, ensuring it's rounded
+    });
 
     // Draw main birds
     for (let monthIndex = 0; monthIndex < months.length; monthIndex++) {

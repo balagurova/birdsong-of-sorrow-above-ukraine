@@ -34,9 +34,8 @@ let intro = function (p, containerId, n) {
         }
       } while (isOverlapping);
 
-      p.fill('#202297');
       p.noStroke();
-      BirdShapes.bird(p, x, y, size, '#202297');
+      BirdShapes.bird(p, x, y, size, '#424992');
       birdPositions.push({ x, y, size });
       birdsDrawn++;
     }
