@@ -80,7 +80,6 @@ let sketchOne = function (p) {
   function initializeBirds() {
     birds = [];
     const topConstraint = monthHeight * 0.8;
-
     for (let i = 0; i < months.length; i++) {
       const totalBirds = p.int(csvData.getString(i, 'Killed')) || 0;
       const childrenKilled =
@@ -177,7 +176,6 @@ let sketchOne = function (p) {
     p.translate(-p.width / 2, -p.height / 2);
 
     let y = 0; // Starting y-coordinate
-    let imageIndex = 0;
 
     images.forEach((img) => {
       // Calculate the height to maintain the aspect ratio

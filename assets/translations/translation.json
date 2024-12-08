@@ -1,21 +1,21 @@
 {
   "en": {
-    "alertText": "The war in Ukraine, started by Russian aggression, has taken countless lives. Behind every statistic is a story—of a woman, a man, a child. This project aims to visualise the profound loss brought by war. Please take a moment and proceed only when you feel ready. ",
+    "alertText": "Each civilian life lost in the war in Ukraine, started by Russian aggression, carries a story—of someone who should still be here. This project reflects the scale of these losses, honoring each life and offering a moment for grief and thought. Please take a moment and proceed only when you feel ready.",
     "dataStory": "Data Story",
     "about": "About",
     "title": "The birdsong of sorrow<br><span style='margin-left: 310px'>above Ukraine</span>",
     "leadText": "Please take a moment here. The following visualizations depict lives lost in the ongoing Russian invasion of Ukraine and may be emotionally challenging. Proceed only if you feel ready.",
-    "ending": "Day by day, the war continues, and birds appear on the canvas, reflecting lives lost. Even one is too many. This must end.",
+    "ending": "Day by day, the war goes on, and so far, it has taken 12 016 lives. Twelve thousand and sixteen. Even one life lost is too many. This must end.",
     "footer-title-methodology": "Methodology",
     "footer-title-disclaimer": "Disclaimer",
-    "footer-title-sources": "Sources",
+    "footer-title-sources": "References",
     "footer-title-acknowledgments": "Acknowledgments",
-    "footer-title-contact": "Contact Us",
-    "footer-methodology": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
-    "footer-disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
-    "footer-sources": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-title-contact": "Contact",
+    "footer-methodology": "<p>The data on lives lost each month is verified by the UN Human Rights Monitoring Mission in Ukraine (HRMMU), operating under the Office of the United Nations High Commissioner for Human Rights (OHCHR). OHCHR believes the actual numbers are significantly higher due to unverified reports and limited access to areas heavily affected early in the conflict.</p><p>The documentation of individual attacks on civilians relies on multiple sources, with Human Rights Watch annual reports, which list attacks on civilians and civilian infrastructure, serving as a primary reference. Individual stories were identified through reports, journalistic pieces, and interviews related to these attacks. For a full list of sources, please refer to the references provided.</p><p>This project utilizes the p5.js library for drawing and visualization. Bird placement is algorithmically generated using Gaussian distribution to achieve an organic layout while considering the total monthly death tolls.</p>",
+    "footer-disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.",
+    "footer-sources": "<p><a href='https://apnews.com/article/ukraine-war-russia-funeral-missiles-fe7b517642efc39fab9a848dc93ac226' target='_blank'>Associated Press. (2023, April 28). Missile strike on Uman kills 23 civilians, including children. AP News.</a></p><p><a href='https://www.bbc.com/news/world-europe-66083275' target='_blank'>BBC News. (2023, July 3). Ukrainian writer Victoria Amelina dies after Kramatorsk attack. BBC.</a></p><p><a href='https://www.bbc.com/news/world-europe-67843312' target='_blank'>BBC News. (2023, December 29). Russian missile strikes hit Ukrainian cities, causing civilian casualties. BBC.</a></p><p><a href='https://www.hrw.org/video-photos/interactive/2023/02/21/death-at-the-station/russian-cluster-munition-attack-in-kramatorsk' target='_blank'>Human Rights Watch. (2023, February 21). Death at the station: Russian cluster munition attack in Kramatorsk. Human Rights Watch.</a></p><p><a href='https://www.hrw.org/world-report/2023/country-chapters/ukraine' target='_blank'>Human Rights Watch. (2023). World report 2023: Ukraine. Human Rights Watch.</a></p><p><a href='https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine' target='_blank'>Human Rights Watch. (2024, July 11). Russia’s July 8 attack on children’s hospital in Ukraine. Human Rights Watch.</a></p><p><a href='https://www.hrw.org/world-report/2024/country-chapters/ukraine' target='_blank'>Human Rights Watch. (2024). World report 2024: Ukraine. Human Rights Watch.</a></p><p><a href='https://www.nytimes.com/2022/07/15/world/europe/russia-vinnytsia-liza-dmytriyeva.html' target='_blank'>The New York Times. (2022, July 15). In Vinnytsia, Russia kills a 4-year-old with Down syndrome. The New York Times.</a></p><p><a href='https://www.thetimes.com/world/russia-ukraine-war/article/the-russians-want-to-kill-us-all-tales-of-a-fireman-in-ukraine-5x3v8rr85?utm_source=chatgpt.com&region=global' target='_blank'>The Times. (2024, September 20). The Russians want to kill us all: Tales of a fireman in Ukraine. The Times.</a></p><p><a href='https://news.un.org/en/story/2023/01/1132492' target='_blank'>United Nations News. (2023, January 6). UN rights chief deplores civilian cost of Russia’s war in Ukraine. UN News.</a></p><p><a href='https://www.unocha.org/publications/report/ukraine/ukraine-situation-report-19-september-2024' target='_blank'>United Nations Office for the Coordination of Humanitarian Affairs. (2024, September 19). Ukraine situation report: 19 September 2024. OCHA.</a></p><p><a href='https://www.ohchr.org/en/documents/country-reports/two-year-update-protection-civilians-impact-hostilities-civilians-24' target='_blank'>Office of the United Nations High Commissioner for Human Rights. (2024, February 22). Two-year update: Protection of civilians—Impact of hostilities on civilians since 24 February 2022. United Nations.</a></p><p><a href='https://ukraine.un.org/en/283659-protection-civilians-armed-conflict-%E2%80%94-october-2024' target='_blank'>Office of the United Nations High Commissioner for Human Rights. (2024). Protection of civilians in armed conflict. Monthly reports from March to October 2024. United Nations.</a></p><p><a href='https://www.unhcr.org/ua/en/64179-psycosocial-support-in-hroza-village.html' target='_blank'>UNHCR. (n.d.). Psychosocial support in Hroza village. UNHCR Ukraine.</a></p><p><a href='https://www.who.int/ukraine/news/item/04-04-2024-triple-risk-of-harm-for-ukraine-s-health-transport-workers-over-other-health-care-staff--who-data-indicates' target='_blank'>World Health Organization. (2024, April 4). Triple risk of harm for Ukraine’s health transport workers over other health-care staff, WHO data indicates. WHO.</a></p>",
     "footer-acknowledgments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
-    "footer-contact": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vel consectetur tincidunt, ligula elit varius magna, ut efficitur justo erat vel leo. Curabitur aliquam tortor id purus faucibus, in fermentum arcu hendrerit. Nulla facilisi. Quisque posuere erat sed nisi cursus, sit amet consequat erat suscipit. Suspendisse potenti. Fusce mollis lacus eget ante gravida, at fermentum mi egestas. Maecenas tempor, magna non volutpat dapibus, enim nulla facilisis ex, ac sollicitudin velit libero eget ligula. Donec ultricies auctor libero.  ",
+    "footer-contact": "The author of this project is available for any questions or thoughts you may have. Feel free to reach out via email at <a href='mailto:anastasia.balagurova@gmail.com>' target='_blank'>anastasia.balagurova@gmail.com</a>",
     "notes": [
       {
         "id": "note-01",
@@ -133,14 +133,14 @@
       },
       {
         "id": "story-02",
-        "note": "On July 14, 2022, 4-year-old <span class='birdChild'></span>Liza Dmytriyeva, a girl with Down syndrome, was killed in a Russian missile strike in Vinnytsia while on her way to speech therapy. Her mother survived the attack.",
+        "note": "On July 14, 2022, 4-year-old <span class='birdChild'></span> Liza Dmytriyeva, a girl with Down syndrome, was killed in a Russian missile strike in Vinnytsia while on her way to speech therapy. Her mother survived the attack.",
         "month": "July",
         "year": "2022",
         "yPlacement": "middle",
         "xPlacement": "right",
         "subnote": "At least 23 people, including three children, were killed as Russian missiles struck Vinnytsia city center.",
-        "sourceText": "(BBC)",
-        "sourceLink": "https://www.bbc.com/news/world-europe-62181726"
+        "sourceText": "(New York Times)",
+        "sourceLink": "https://www.nytimes.com/2022/07/15/world/europe/russia-vinnytsia-liza-dmytriyeva.html"
       },
       {
         "id": "story-03",
@@ -152,25 +152,25 @@
       },
       {
         "id": "story-04",
-        "note": "<span class='birdChild'></span>11-year-old Sofia Shulha and her 6-year-old brother, Mykhayl,<span class='birdChild'></span>were likely asleep when they lost their lives as Russian missiles struck their home in Uman at 4 a.m. on April 28, 2023.",
+        "note": "<span class='birdChild'></span> 11-year-old Sofia Shulha and her 6-year-old brother, <span class='birdChild'></span> Mykhayl, were likely asleep when they lost their lives as Russian missiles struck their home in Uman at 4 a.m. on April 28, 2023.",
         "month": "April",
         "year": "2023",
         "yPlacement": "middle",
         "xPlacement": "right",
         "subnote": "The strike killed 23 civilians, including six children.",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "sourceText": "(Associated Press)",
+        "sourceLink": "https://apnews.com/article/ukraine-war-russia-funeral-missiles-fe7b517642efc39fab9a848dc93ac226?utm_source=chatgpt.com"
       },
       {
         "id": "story-05",
         "note": "Ukrainian writer<span class='bird'></span> Victoria Amelina, 37, and a war crimes researcher, was killed in a Russian missile strike on a pizza restaurant in Kramatorsk on June 27, 2023.",
-        "subnote": "The attack killed 13 people in total, including four children.",
+        "subnote": "The attack killed 13 people in total.",
         "month": "June",
         "year": "2023",
         "yPlacement": "middle",
         "xPlacement": "left",
-        "sourceText": "[N]",
-        "sourceLink": "http://google.com"
+        "sourceText": "(BBC)",
+        "sourceLink": "https://www.bbc.com/news/world-europe-66083275"
       },
       {
         "id": "story-06",
@@ -185,17 +185,15 @@
       },
       {
         "id": "story-07",
-        "note": "On December 29, 2023, the attack killed 58 people and injured 160, targeting Kyiv, Odesa, Kharkiv, and Lviv, and damaging civilian infrastructure, homes, and schools.",
+        "note": "On December 29, 2023, the attack killed at least 30 people and injured 160, targeting Kyiv, Odesa, Kharkiv, and Lviv, and damaging civilian infrastructure, homes, and schools. <a href='https://www.bbc.com/news/world-europe-67843312'>(BBC)</a>",
         "month": "December",
         "year": "2023",
         "yPlacement": "middle",
-        "xPlacement": "right",
-        "sourceText": "TBA",
-        "sourceLink": "http://google.com"
+        "xPlacement": "right"
       },
       {
         "id": "story-09",
-        "note": "On July 8, 2024, the Okhmatdyt Children's Hospital, the largest pediatric hospital in Kyiv, came under attack. More than 300 people were injured, including eight children,<br>and <span class='bird'></span><span class='birdOneWing'></span> two adults, including a doctor, lost their lives. <a href='https://www.nytimes.com/2024/07/09/world/europe/ukraine-childrens-hospial-russia.html '>(New York Times)</a>",
+        "note": "On July 8, 2024, the Okhmatdyt Children's Hospital, the largest pediatric hospital in Kyiv, came under attack. More than 300 people were injured, including eight children,<br>and <span class='bird'></span><span class='birdOneWing'></span> two adults, including a doctor, lost their lives. <a href='https://www.nytimes.com/2024/07/09/world/europe/ukraine-childrens-hospial-russia.html '>(New York Times,</a> <a href='https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine'>Human Rights Watch)</a> ",
         "subnote": "",
         "month": "July",
         "year": "2024",
@@ -206,23 +204,23 @@
         "id": "story-10",
         "note": "On March 2, 2024, a Russian drone struck a nine-story residential building in Odesa. Anna Gaidarzhi and her four-month-old son, Tymofii, <span class='bird'></span><span class='birdChild'></span> were found in the basement, buried under rubble after the upper floors collapsed. Anna’s husband, Serhii, and their three-year-old daughter, Lizzi, survived.",
         "subnote": "According to the UN, the attack killed five children, most under the age of three, making it the deadliest incident for children in over nine months.",
-        "month": "March",
+        "month": "February",
         "year": "2024",
-        "yPlacement": "top",
-        "xPlacement": "right",
+        "yPlacement": "bottom",
+        "xPlacement": "left",
         "sourceText": "(Human Rights Warch)",
         "sourceLink": "https://www.hrw.org/news/2024/03/21/drone-attack-collapses-odesa-residential-building"
       },
       {
         "id": "story-10",
         "note": "On September 19, 2024, a Russian GPS-guided bomb struck Sumy’s care facility for the elderly. A 78-year-old woman <span class='bird'></span> was killed, and 12 others were injured in the attack.",
-        "subnote": "The Russian strike injured 12 people and caused significant destruction. The facility was home to 230 elderly residents and 60 staff members.",
+        "subnote": "The Russian strike injured 12 people and caused significant destruction. The facility was home to 230 elderly residents and 60 staff members.</br> <a href='https://www.thetimes.com/world/russia-ukraine-war/article/the-russians-want-to-kill-us-all-tales-of-a-fireman-in-ukraine-5x3v8rr85?utm_source=chatgpt.com&region=global '>(The Times,</a> ",
         "month": "September",
         "year": "2024",
         "yPlacement": "top",
         "xPlacement": "right",
-        "sourceText": "The Times",
-        "sourceLink": "https://www.thetimes.com/world/russia-ukraine-war/article/the-russians-want-to-kill-us-all-tales-of-a-fireman-in-ukraine-5x3v8rr85?utm_source=chatgpt.com&region=global"
+        "sourceText": "UNOCHA)",
+        "sourceLink": "https://www.unocha.org/publications/report/ukraine/ukraine-situation-report-19-september-2024"
       }
     ],
     "months": [

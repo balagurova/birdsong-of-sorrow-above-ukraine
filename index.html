@@ -57,10 +57,10 @@
       <div class="footerArea">
         <div class="caption" id="footer-title-methodology"></div>
         <p id="footer-methodology"></p>
-        <div class="caption" id="footer-title-disclaimer"></div>
-        <p id="footer-disclaimer"></p>
         <div class="caption" id="footer-title-sources"></div>
         <p id="footer-sources"></p>
+        <div class="caption" id="footer-title-disclaimer"></div>
+        <p id="footer-disclaimer"></p>
         <div class="caption" id="footer-title-acknowledgments"></div>
         <p id="footer-acknowledgments"></p>
         <div class="caption" id="footer-title-contact"></div>
@@ -109,11 +109,14 @@ function sketchCompleted() {
     legendSketch = legendSketch || new p5((p) => legend(p, 'legend', 7), 'legend');
 }
 
+sketchCompleted();
+
      // Tab switcher
 
     function switchScript(script) {
-  const gridElement = document.getElementById('grid');
   const oneElement = document.getElementById('one');
+  const gridElement = document.getElementById('grid');
+  const endingElement = document.getElementById('ending-canvas');
   const btnGrid = document.getElementById('btnGrid');
   const btnOne = document.getElementById('btnOne');
 
@@ -121,14 +124,16 @@ function sketchCompleted() {
   const classesToToggle = ['active', 'underline-animation', 'hand-drawn-underline'];
 
 if (script === 'grid') {
-    gridElement.style.display = 'block';
+    gridElement.style.display = 'grid';
     oneElement.style.display = 'none';
+    endingElement.style.marginTop = '-500px';
 
     classesToToggle.forEach(cls => btnGrid.classList.add(cls));
     classesToToggle.forEach(cls => btnOne.classList.remove(cls));
 } else if (script === 'one') {
     gridElement.style.display = 'none';
     oneElement.style.display = 'block';
+    endingElement.style.marginTop = '0px';
 
     classesToToggle.forEach(cls => btnGrid.classList.remove(cls));
     classesToToggle.forEach(cls => btnOne.classList.add(cls));
