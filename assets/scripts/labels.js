@@ -37,7 +37,7 @@ fetch('./assets/translations/translation.json')
       monthElement.innerHTML = monthKey;
 
       monthElement.style.position = 'absolute';
-      monthElement.style.left = '32px'; // Adjust this as needed
+      monthElement.style.left = '2rem'; // Adjust this as needed
       monthElement.style.top = `${monthTop}px`; // Adjust for spacing
 
       // Append month label to the container

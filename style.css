@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  font-size: 1rem;
 }
 
 .month-label{
@@ -8,17 +9,17 @@ html, body {
   font-family: "calluna-sans", sans-serif;
   font-weight: 300;
 font-style: normal;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #fff;
   font-style: normal;
     line-height: 1.4;
     text-rendering: geometricPrecision;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03rem;
 }
 
 .hero{
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
 
@@ -35,7 +36,7 @@ font-style: normal;
 
 .bird, .birdChild, .birdOneWing {
   position: relative;
-  padding-left: 24px; /* Space for the bird image */
+  padding-left: 1.5rem; /* Space for the bird image */
   display: inline-block;
 }
 
@@ -47,8 +48,8 @@ font-style: normal;
   left: 0;
   top: 60%;
   transform: translateY(-60%);
-  width: 24px; /* Width of the bird image */
-  height: 24px; /* Height of the bird image */
+  width: 1.5rem; /* Width of the bird image */
+  height: 1.5rem; /* Height of the bird image */
   background-image: url('./assets/images/bird-2.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
@@ -60,8 +61,8 @@ font-style: normal;
   left: 0;
   top: 60%;
   transform: translateY(-60%);
-  width: 24px; /* Width of the bird image */
-  height: 24px; /* Height of the bird image */
+  width: 1.5rem; /* Width of the bird image */
+  height: 1.5rem; /* Height of the bird image */
   background-image: url('./assets/images/bird-child-2.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
@@ -73,15 +74,15 @@ font-style: normal;
   left: 0;
   top: 70%;
   transform: translateY(-70%);
-  width: 20px; /* Width of the bird image */
-  height: 20px; /* Height of the bird image */
+  width: 1.25rem; /* Width of the bird image */
+  height: 1.25rem; /* Height of the bird image */
   background-image: url('./assets/images/bird-1.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .note{
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffffE6;
   font-weight: 300;
   line-height: 1.4;
@@ -94,12 +95,11 @@ font-style: normal;
   font-family: "calluna-sans", sans-serif;
   font-weight: 300;
 font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   color: #ffffffE6;
   font-style: normal;
     line-height: 1.4;
     text-rendering: geometricPrecision;
-    max-width: 22rem;
 }
 .story{
   max-width: 24rem;
@@ -137,7 +137,7 @@ font-style: normal;
 
 footer{
   display: flex;
-  margin-top: 32px;
+  margin-top: 2rem;
   flex-direction: column;
   text-align: left;
 }
@@ -148,7 +148,8 @@ footer .caption{
 }
 
 footer .footerArea {
-  margin: 24px auto 24px auto;
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0 1.25rem;
 }
 footer p {
   text-align: left;
@@ -157,7 +158,7 @@ footer p {
   margin-bottom: 8px;
 }
 footer div div {
-margin-top: 32px;
+margin-top: 2rem;
 }
 
 footer a {
@@ -199,7 +200,7 @@ body {
 
 #one {
   width: 100%;
-  margin: 32px!important;
+  margin: 2rem!important;
   width: -webkit-fill-available;
   position: relative;
   height: auto;
@@ -208,7 +209,7 @@ body {
 #brush{
   width: 1626px;
   height: 400px;
-  margin: 32px auto;
+  margin: 2rem auto;
 
 }
 
@@ -231,11 +232,11 @@ body {
 }
 
 .menu{
-  padding: 16px 24px;
+  padding: 1rem 1.5rem;
   position: absolute;
   top: 0;
   right: 0;
-  gap: 24px;
+  gap: 1.5rem;
   display: flex;
   align-items: baseline;
 }
@@ -269,11 +270,11 @@ body{
 
 h1{
 font-family: titleFont, serif;
-font-size: 200px;
+font-size: 12.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: 160px; 
-margin-bottom: 24px;
+margin-bottom: 1.5rem;
 margin-top: 64px;
 }
 
@@ -287,7 +288,7 @@ animation: fadeIn 2s;
 font-family: "calluna", serif;
 font-weight: 300;
 font-style: normal;
-font-size: 20px;
+font-size: 1.25rem;
 line-height: 1.4;
 }
 
@@ -395,7 +396,7 @@ a{
 
 .scroll{
   position: absolute;
-  bottom: 24px;
+  bottom: 1.5rem;
   left: 50%;
   transform: translate(-50%);
 }
@@ -442,7 +443,7 @@ a{
  margin-right: 10px;
   color: #202297;
   text-align: right;
-  margin-left: -220px;
+  margin-left: -21.25rem;
 
 }
 
@@ -471,9 +472,9 @@ a{
 /* grid */
 
 #grid {
-  gap: 16px;
-  row-gap: 32px;
-  padding: 32px;
+  gap: 1rem;
+  row-gap: 2rem;
+  padding: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   width: 100%;
   display: none;
@@ -508,7 +509,7 @@ a{
 
 .grid-label-top {
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   justify-content: space-between; /* Align text on opposite sides */
   font-weight: bold;
   text-rendering: geometricPrecision;
@@ -522,7 +523,7 @@ a{
   font-family: "calluna-sans", sans-serif;
   font-weight: 300;
 font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 0px; /* Add spacing between rows */
   text-rendering: geometricPrecision;
   color: #202297E6;
@@ -545,17 +546,40 @@ font-style: normal;
 
 
 @media only screen and (max-width: 712px) {
+
+
+ html{
+  font-size: 14px;
+ }
+
  h1{
-  font-size: 90px;
   line-height: 1;
+  font-size: 90px;
   text-align: center;
  }
 
- p{
-  font-size: 16px;
- }
 
  .titleSpan{
   margin-left: 0px;
  }
+
+ #one{
+  margin: 1rem!important;
+  background-color: #424992;
+ }
+
+ .story{
+max-width: 20rem; 
+}
+
+#grid{
+  width: fit-content;
+}
+
+#ending-canvas{
+  margin-top: 0!important;
+}
+
+
+
 }

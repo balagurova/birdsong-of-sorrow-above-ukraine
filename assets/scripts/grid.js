@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const parent = cell; // Use the grid cell as the parent container
 
           const resizeCanvasToParent = () => {
-            parentWidth = parent.offsetWidth || 380; // Fallback width
-            parentHeight = parent.offsetHeight || 380; // Fallback height
+            parentWidth = parent.offsetWidth || 350; // Fallback width
+            parentHeight = parent.offsetHeight || 350; // Fallback height
 
             if (parentWidth > 0 && parentHeight > 0) {
               p.resizeCanvas(parentWidth, parentHeight);
