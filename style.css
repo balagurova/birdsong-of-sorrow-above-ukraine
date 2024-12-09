@@ -20,8 +20,13 @@ font-style: normal;
 
 .hero{
   padding: 0 1.5rem;
+  max-height: 1200px;
 }
 
+#mainContent{
+  max-width: 1980px;
+    margin: 0 auto;
+}
 
 .month-label::before {
   content: '';
@@ -429,9 +434,11 @@ a{
 
 .how-to-read {
   width: 100%;
+  display: none;
   position: relative;
   height: 60vh;
-    display: flex;
+  max-height: 800px;
+
     align-items: center;
     justify-content: center;
 }

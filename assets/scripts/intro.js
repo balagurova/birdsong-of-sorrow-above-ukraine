@@ -1,6 +1,8 @@
-let intro = function (p, containerId, n) {
+let intro = function (p, containerId, params) {
   let birdsDrawn = 0;
   let birdPositions = [];
+
+  const { number, sizeRange, color, exclusionZones = [] } = params;
 
   p.setup = function () {
     const canvasContainer = document.getElementById(containerId);
@@ -10,20 +12,24 @@ let intro = function (p, containerId, n) {
   };
 
   p.draw = function () {
-    if (p.frameCount % 10 === 0 && birdsDrawn < n) {
+    if (p.frameCount % 10 === 0 && birdsDrawn < number) {
       let x, y, size, isOverlapping;
-      const marginX = p.width / 3;
-      const marginY = p.height / 3;
 
       do {
         x = p.random(20, p.width - 20);
         y = p.random(20, p.height - 20);
-        size = p.random(10, 30);
+        size = p.random(sizeRange.min, sizeRange.max);
 
-        isOverlapping =
-          (x > marginX && x < 2 * marginX && y > marginY && y < 2 * marginY) ||
-          (x > 2 * marginX && y > marginY && y < 2 * marginY);
+        // Check if the position is inside any exclusion zone
+        isOverlapping = exclusionZones.some(
+          (zone) =>
+            x > zone.x &&
+            x < zone.x + zone.w &&
+            y > zone.y &&
+            y < zone.y + zone.h
+        );
 
+        // Check for overlaps with already drawn birds
         for (let i = 0; i < birdPositions.length; i++) {
           const bird = birdPositions[i];
           const distance = p.dist(x, y, bird.x, bird.y);
@@ -35,12 +41,12 @@ let intro = function (p, containerId, n) {
       } while (isOverlapping);
 
       p.noStroke();
-      BirdShapes.bird(p, x, y, size, '#424992');
+      BirdShapes.bird(p, x, y, size, color);
       birdPositions.push({ x, y, size });
       birdsDrawn++;
     }
 
-    if (birdsDrawn >= n) {
+    if (birdsDrawn >= number) {
       p.noLoop();
     }
   };

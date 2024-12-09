@@ -34,33 +34,3 @@ function selectLanguage(lang) {
     .querySelector(`.language-option[onclick="selectLanguage('${lang}')"]`)
     .classList.add('selected');
 }
-
-function drawNotesAndBirds() {
-  for (let note of notes) {
-    p.push();
-    p.translate(note.x, note.y);
-    p.fill('#fff');
-
-    // Draw the note text
-    p.text(note.text, 0, 0);
-
-    // Check if 'n' is defined and not zero
-    if (note.n && note.n !== 0) {
-      // Generate 'n' number of birds
-      for (let i = 0; i < note.n; i++) {
-        // Random position around the note
-        let birdX = -16;
-        let birdY = -4;
-
-        // Draw the bird at the random position
-        p.push();
-        p.translate(birdX, birdY);
-        p.fill('#fff');
-        BirdShapes.bird(p, 0, 0, 15, '#fff');
-        p.pop();
-      }
-    }
-
-    p.pop();
-  }
-}
