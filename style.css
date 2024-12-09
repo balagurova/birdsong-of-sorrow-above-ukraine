@@ -17,6 +17,10 @@ font-style: normal;
     letter-spacing: 0.03em;
 }
 
+.hero{
+  padding: 0 24px;
+}
+
 
 .month-label::before {
   content: '';
@@ -530,7 +534,28 @@ font-style: normal;
 }
 
 
+.titleSpan{
+  margin-left: 300px;
+ }
+
 .grid-label-total,
 .grid-label-children-total {
   font-weight: normal;
+}
+
+
+@media only screen and (max-width: 712px) {
+ h1{
+  font-size: 90px;
+  line-height: 1;
+  text-align: center;
+ }
+
+ p{
+  font-size: 16px;
+ }
+
+ .titleSpan{
+  margin-left: 0px;
+ }
 }

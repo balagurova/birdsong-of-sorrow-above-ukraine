@@ -3,7 +3,7 @@
     "alertText": "Each civilian life lost in the war in Ukraine, started by Russian aggression, carries a story—of someone who should still be here. This project reflects the scale of these losses, honoring each life and offering a moment for grief and thought. Please take a moment and proceed only when you feel ready.",
     "dataStory": "Data Story",
     "about": "About",
-    "title": "The birdsong of sorrow<br><span style='margin-left: 310px'>above Ukraine</span>",
+    "title": "The birdsong of sorrow<br><span class='titleSpan'>above Ukraine</span>",
     "leadText": "Please take a moment here. The following visualizations depict lives lost in the ongoing Russian invasion of Ukraine and may be emotionally challenging. Proceed only if you feel ready.",
     "ending": "Day by day, the war goes on, and so far, it has taken 12 016 lives. Twelve thousand and sixteen. Even one life lost is too many. This must end.",
     "footer-title-methodology": "Methodology",
