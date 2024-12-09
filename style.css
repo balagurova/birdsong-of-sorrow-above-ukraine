@@ -434,7 +434,7 @@ a{
 
 .how-to-read {
   width: 100%;
-  display: none;
+  display: flex;
   position: relative;
   height: 60vh;
   max-height: 800px;
@@ -450,16 +450,21 @@ a{
  margin-right: 10px;
   color: #202297;
   text-align: right;
-  margin-left: -21.25rem;
-
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%);
 }
 
 .how-to-read #legend {
-  position: relative;
   height: 200px;
   width: 600px;
   background: url('assets/images/legend-blue.png');
   background-size: cover;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .how-to-read #legend .note {
   position: absolute;
