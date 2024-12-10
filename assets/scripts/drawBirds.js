@@ -1,14 +1,38 @@
-let intro = function (p, containerId, params) {
+let drawBirds = function (p, containerId, params) {
   let birdsDrawn = 0;
   let birdPositions = [];
 
-  const { number, sizeRange, color, exclusionZones = [] } = params;
+  // Destructure parameters
+  const { number, sizeRange, color, exclusionZonesIds = [] } = params;
+  params.exclusionZones = []; // Initialize as an empty array
 
   p.setup = function () {
     const canvasContainer = document.getElementById(containerId);
     const canvasWidth = canvasContainer.clientWidth;
     const canvasHeight = canvasContainer.clientHeight;
     p.createCanvas(canvasWidth, canvasHeight, p.SVG);
+
+    // Dynamically get exclusion zones' parameters from IDs
+    params.exclusionZones = exclusionZonesIds
+      .map((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const containerRect = canvasContainer.getBoundingClientRect();
+          const exclusionZone = {
+            x: rect.left - containerRect.left,
+            y: rect.top - containerRect.top,
+            w: rect.width,
+            h: rect.height,
+          };
+
+          console.log(`Exclusion zone for ID "${id}":`, exclusionZone);
+          return exclusionZone;
+        }
+        console.warn(`Element with ID "${id}" not found.`);
+        return null;
+      })
+      .filter(Boolean); // Remove null values
   };
 
   p.draw = function () {
@@ -21,7 +45,7 @@ let intro = function (p, containerId, params) {
         size = p.random(sizeRange.min, sizeRange.max);
 
         // Check if the position is inside any exclusion zone
-        isOverlapping = exclusionZones.some(
+        isOverlapping = params.exclusionZones.some(
           (zone) =>
             x > zone.x &&
             x < zone.x + zone.w &&

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/cig3amv.css">
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/bird.js"></script>
-    <script src="./assets/scripts/intro.js"></script>
     <script src="./assets/scripts/legend.js"></script>
     <script src="./assets/scripts/outro.js"></script>
 </head>
@@ -85,6 +84,7 @@
   <script src="./assets/scripts/labels.js"></script>
   <script type="module" src="./assets/scripts/one.js"></script>
   <script src="./assets/scripts/grid.js"></script>
+  <script src="./assets/scripts/drawBirds.js"></script>
 
 
 
@@ -97,25 +97,20 @@
     let alertSketch, endingSketch, footerSketch, legendSketch;
 
     // Example usage:
-const params1 = {
+const params = {
   number: 32,
   sizeRange: { min: 12, max: 26 },
   color: '#424992',
-  exclusionZones: [
-    { x: 599, y: 658, w: 512, h: 140 },
-  ],
+  exclusionZonesIds: ['dataStory', 'alertText'],
 };
 
-
-
-const params3 = {
+const paramsOutro = {
   number: 3,
   sizeRange: { min: 17, max: 26 },
   color: '#424992',
-  exclusionZones: [
-    { x: 0, y: 0, w: 0, h: 0 },
-  ],
+  exclusionZonesIds: [],
 };
+
 
 
 
@@ -126,10 +121,14 @@ function sketchCompleted() {
     document.getElementById('loadingScreen').style.display = 'none';
 
     // Reuse or create sketches
+    setTimeout(() => {
+  // console.log(document.getElementById('dataStory').getBoundingClientRect());
+  alertSketch = alertSketch ||  new p5((p) => drawBirds(p, 'alert-canvas', params), 'alert-canvas');
+  footerSketch = footerSketch || new p5((p) => drawBirds(p, 'footer-canvas', paramsOutro), 'footer-canvas');
 
-    alertSketch = alertSketch ||  new p5((p) => intro(p, 'alert-canvas', params1), 'alert-canvas');
+
+}, 2000);
     endingSketch = endingSketch || new p5((p) => outro(p, 'ending-canvas', 50), 'ending-canvas');
-    footerSketch = footerSketch || new p5((p) => intro(p, 'footer-canvas', params3), 'footer-canvas');
     legendSketch = legendSketch || new p5((p) => legend(p, 'legend', 7), 'legend');
 }
 

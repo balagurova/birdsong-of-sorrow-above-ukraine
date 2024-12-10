@@ -514,7 +514,7 @@ a{
   justify-content: space-between; /* Space out rows if needed */
   align-items: stretch;
   width: 100%;
-  padding: 0px 10px;
+  padding: 0px 2px;
   box-sizing: border-box;
   font-size: 14px;
 }
