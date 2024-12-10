@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/cig3amv.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/cig3amv.css" />
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/bird.js"></script>
     <script src="./assets/scripts/legend.js"></script>
     <script src="./assets/scripts/outro.js"></script>
-</head>
-<style>
-  #grid{
-    display: grid!important;
-  }
-</style>
-<body>
- 
+  </head>
+  <style>
+    #grid {
+      display: grid !important;
+    }
+  </style>
+  <body>
     <div id="mainContent" class="content">
-      <div class="menu">
-      </div>
-      </section>
       <section class="hero">
         <div id="alert-canvas"></div>
         <p class="caption" id="dataStory"></p>
         <h1 id="title"></h1>
         <p id="alertText"></p>
         <div class="scroll">
-          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="8"
+            height="13"
+            viewBox="0 0 8 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <line x1="4" y1="-2.18558e-08" x2="4" y2="12" stroke="black"></line>
-            <path fill="none" d="M7 9.04785L4 12.0002L1 9.04785" stroke="black"></path>
+            <path
+              fill="none"
+              d="M7 9.04785L4 12.0002L1 9.04785"
+              stroke="black"
+            ></path>
           </svg>
-        </div> 
+        </div>
       </section>
       <div id="grid"></div>
       <footer>
@@ -49,58 +55,57 @@
         </div>
         <div id="footer-canvas"></div>
       </footer>
-       
+    </div>
+
     <script>
-        let alertSketch, endingSketch, footerSketch, legendSketch;
+      let alertSketch, endingSketch, footerSketch, legendSketch;
 
-// Example usage:
-const paramsIntro = {
-number: 24,
-sizeRange: { min: 12, max: 26 },
-color: '#424992',
-exclusionZonesIds: ['dataStory', 'alertText'],
-};
+      // Example usage:
+      const paramsIntro = {
+        number: 24,
+        sizeRange: { min: 12, max: 26 },
+        color: '#424992',
+        exclusionZonesIds: ['dataStory', 'alertText'],
+      };
 
-const paramsOutro = {
-number: 3,
-sizeRange: { min: 17, max: 26 },
-color: '#424992',
-exclusionZonesIds: [],
-};
+      const paramsOutro = {
+        number: 3,
+        sizeRange: { min: 17, max: 26 },
+        color: '#424992',
+        exclusionZonesIds: [],
+      };
 
-
-setTimeout(() => {
-  // console.log(document.getElementById('dataStory').getBoundingClientRect());
-  alertSketch = alertSketch ||  new p5((p) => drawBirds(p, 'alert-canvas', paramsIntro), 'alert-canvas');
-  footerSketch = footerSketch || new p5((p) => drawBirds(p, 'footer-canvas', paramsOutro), 'footer-canvas');
-
-
-}, 2000);
+      setTimeout(() => {
+        // console.log(document.getElementById('dataStory').getBoundingClientRect());
+        alertSketch =
+          alertSketch ||
+          new p5(
+            (p) => drawBirds(p, 'alert-canvas', paramsIntro),
+            'alert-canvas'
+          );
+        footerSketch =
+          footerSketch ||
+          new p5(
+            (p) => drawBirds(p, 'footer-canvas', paramsOutro),
+            'footer-canvas'
+          );
+      }, 2000);
     </script>
-  
-  
-  
-   
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-      <script src="./assets/scripts/grid.js"></script>
-      <script src="./assets/scripts/drawBirds.js"></script>
-    
 
-  <!-- Include p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="./assets/scripts/grid.js"></script>
+    <script src="./assets/scripts/drawBirds.js"></script>
 
+    <!-- Include p5.js library -->
 
-  <!-- Include the sketch scripts -->
-  <!-- <script src="./assets/translations/translation.json"></script>
+    <!-- Include the sketch scripts -->
+    <!-- <script src="./assets/translations/translation.json"></script>
   <script src="./assets/scripts/labels.js"></script>
   <script type="module" src="./assets/scripts/one.js"></script>
   <script src="./assets/scripts/grid.js"></script>
   <script src="./assets/scripts/drawBirds.js"></script> -->
 
-
-
-
-
-  <!-- <script>
+    <!-- <script>
     let sketchesCompleted = false;
     let icount = 0;
 
@@ -180,5 +185,5 @@ if (script === 'grid') {
 
 
   </script> -->
-</body>
+  </body>
 </html>
