@@ -20,6 +20,7 @@ font-style: normal;
 
 .hero{
   padding: 0 1.5rem;
+  position: relative;
   max-height: 1200px;
 }
 
@@ -563,6 +564,7 @@ font-style: normal;
  html,body{
   font-size: 14px;
   overflow-x: hidden;
+  height: 100%;
  }
 
  h1{
