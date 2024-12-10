@@ -165,13 +165,21 @@ async function initializeGrid() {
         }
       };
 
-      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      let lastWidth = 0;
+      let lastHeight = 0;
 
       p.windowResized = function () {
-        if (!isMobile) {
-          const parent = cell;
-          const parentWidth = parent.offsetWidth;
-          const parentHeight = parent.offsetWidth;
+        const parent = cell;
+        const parentWidth = parent.offsetWidth;
+        const parentHeight = parent.offsetWidth;
+
+        // Only resize if the dimensions change significantly
+        if (
+          Math.abs(parentWidth - lastWidth) > 10 ||
+          Math.abs(parentHeight - lastHeight) > 10
+        ) {
+          lastWidth = parentWidth;
+          lastHeight = parentHeight;
           p.resizeCanvas(parentWidth, parentHeight);
           p.redraw();
         }
