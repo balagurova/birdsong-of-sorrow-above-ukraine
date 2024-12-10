@@ -560,7 +560,13 @@ font-style: normal;
 
 @media only screen and (max-width: 712px) {
 
+#buttons{
+  display: none;
+}
 
+#grid{
+  display: grid;
+}
  html,body{
   font-size: 14px;
   overflow-x: hidden;
@@ -591,8 +597,16 @@ max-width: 20rem;
   width: fit-content;
 }
 
+#one{
+  display: none;
+}
+
 #ending-canvas{
   margin-top: 0!important;
+}
+
+.how-to-read{
+  display: none;
 }
 
 

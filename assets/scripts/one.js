@@ -220,12 +220,6 @@ let sketchOne = function (p) {
     });
   };
 
-  p.updateData = function (newData) {
-    months = newData.months || [];
-    initializeBirds();
-    p.redraw();
-  };
-
   p.updateStoryData = function (data) {
     exclusionZones = data.zones;
     initializeBirds();
