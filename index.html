@@ -96,12 +96,23 @@
 
     <!-- Include the sketch scripts -->
     <script src="./assets/translations/translation.json"></script>
-    <script src="./assets/scripts/labels.js"></script>
-    <script type="module" src="./assets/scripts/one.js"></script>
     <script src="./assets/scripts/grid.js"></script>
     <script src="./assets/scripts/drawBirds.js"></script>
 
     <script>
+      // Check if the device is not mobile (adjust the breakpoint as needed)
+      if (window.innerWidth > 768) {
+        // Load labels.js
+        const labelsScript = document.createElement('script');
+        labelsScript.src = './assets/scripts/labels.js';
+        document.body.appendChild(labelsScript);
+
+        // Load one.js
+        const oneScript = document.createElement('script');
+        oneScript.type = 'module'; // Specify that it's a module script
+        oneScript.src = './assets/scripts/one.js';
+        document.body.appendChild(oneScript);
+      }
       let sketchesCompleted = false;
       let icount = 0;
 
