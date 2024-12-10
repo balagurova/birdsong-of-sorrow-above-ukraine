@@ -97,8 +97,8 @@
     let alertSketch, endingSketch, footerSketch, legendSketch;
 
     // Example usage:
-const params = {
-  number: 32,
+const paramsIntro = {
+  number: 24,
   sizeRange: { min: 12, max: 26 },
   color: '#424992',
   exclusionZonesIds: ['dataStory', 'alertText'],
@@ -123,7 +123,7 @@ function sketchCompleted() {
     // Reuse or create sketches
     setTimeout(() => {
   // console.log(document.getElementById('dataStory').getBoundingClientRect());
-  alertSketch = alertSketch ||  new p5((p) => drawBirds(p, 'alert-canvas', params), 'alert-canvas');
+  alertSketch = alertSketch ||  new p5((p) => drawBirds(p, 'alert-canvas', paramsIntro), 'alert-canvas');
   footerSketch = footerSketch || new p5((p) => drawBirds(p, 'footer-canvas', paramsOutro), 'footer-canvas');
 
 
