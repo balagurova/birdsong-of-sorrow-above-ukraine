@@ -560,8 +560,9 @@ font-style: normal;
 @media only screen and (max-width: 712px) {
 
 
- html{
+ html,body{
   font-size: 14px;
+  overflow-x: hidden;
  }
 
  h1{
