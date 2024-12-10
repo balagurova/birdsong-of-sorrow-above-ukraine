@@ -164,13 +164,17 @@ async function initializeGrid() {
           BirdShapes.bird(p, x, y, p.random(10, 12), '#fff');
         }
       };
+
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
       p.windowResized = function () {
-        // Ensure canvas resizes with the window
-        const parent = cell;
-        parentWidth = parent.offsetWidth;
-        parentHeight = parent.offsetHeight;
-        p.resizeCanvas(parentWidth, parentHeight);
-        p.redraw();
+        if (!isMobile) {
+          const parent = cell;
+          const parentWidth = parent.offsetWidth;
+          const parentHeight = parent.offsetWidth;
+          p.resizeCanvas(parentWidth, parentHeight);
+          p.redraw();
+        }
       };
     };
 
