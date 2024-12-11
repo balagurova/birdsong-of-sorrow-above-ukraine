@@ -175,8 +175,8 @@ async function initializeGrid() {
 
         // Only resize if the dimensions change significantly
         if (
-          Math.abs(parentWidth - lastWidth) > 10 ||
-          Math.abs(parentHeight - lastHeight) > 10
+          Math.abs(parentWidth - lastWidth) > 100 ||
+          Math.abs(parentHeight - lastHeight) > 100
         ) {
           lastWidth = parentWidth;
           lastHeight = parentHeight;

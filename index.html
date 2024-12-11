@@ -96,11 +96,7 @@
 
     <!-- Include the sketch scripts -->
     <script src="./assets/translations/translation.json"></script>
-    <script src="./assets/scripts/grid.js"></script>
-    <script src="./assets/scripts/drawBirds.js"></script>
-
     <script>
-      // Check if the device is not mobile (adjust the breakpoint as needed)
       if (window.innerWidth > 768) {
         // Load labels.js
         const labelsScript = document.createElement('script');
@@ -113,6 +109,13 @@
         oneScript.src = './assets/scripts/one.js';
         document.body.appendChild(oneScript);
       }
+    </script>
+    <script src="./assets/scripts/grid.js"></script>
+    <script src="./assets/scripts/drawBirds.js"></script>
+
+    <script>
+      // Check if the device is not mobile (adjust the breakpoint as needed)
+
       let sketchesCompleted = false;
       let icount = 0;
 
