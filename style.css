@@ -213,8 +213,9 @@ footer a {
 body {
   padding: 0;
   margin: 0;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "callina-sans", sans-serif;
   font-family: "calluna", serif;
+  font-style: italic;
 }
 
 #one {
