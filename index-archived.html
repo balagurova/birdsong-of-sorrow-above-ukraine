@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/cig3amv.css" />
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/bird.js"></script>
+    <script src="./assets/scripts/legend.js"></script>
     <script src="./assets/scripts/outro.js"></script>
   </head>
   <body>
@@ -16,6 +17,13 @@
 
     <div id="mainContent" class="content">
       <div id="alert-canvas"></div>
+      <!-- <div class="menu"> -->
+      <!-- <div class="languages">
+          <span class="language-option selected caption" onclick="selectLanguage('en')">EN</span>
+          <span class="language-option caption" onclick="selectLanguage('ukr')">UKR</span>
+          <span class="language-option caption" onclick="selectLanguage('ru')">RU</span>      
+        </div> -->
+      <!-- </div> -->
       <section class="hero">
         <p class="caption" id="dataStory"></p>
         <h1 id="title"></h1>
@@ -37,14 +45,19 @@
           </svg>
         </div>
       </section>
-    </div>
-      <div id="legend-2">
-        <div class="note" style="margin-left: 64px">Each bird<span class="birdBlue"></span></div>
-        <div class="note" style="margin-left: 96px">represents a life</div>
-        <div class="note" style="margin-left: 148px">lost.</div>
-        <div class="note" style="margin-left: 300px"><span class="birdChild"></span>Light blue</div>
-        <div class="note" style="margin-left: 360px">signifies children</div>
-        <div class="note" style="margin-left: 250px">among the losses.</div>
+      <div class="how-to-read">
+        <div class="timeline subnote">
+          Time flows from top to bottom, divided into monthly periods
+        </div>
+        <div id="legend">
+          <div class="note" id="legendNote01">
+            Each bird represents a life lost.
+          </div>
+          <div class="note" id="legendNote02">
+            <span class="birdChild" style="margin-right: 4px"></span>Light blue
+            birds signify children lost.
+          </div>
+        </div>
       </div>
       <div id="buttons">
         <button
@@ -68,8 +81,6 @@
         <p id="footer-author-note"></p>
         <div class="caption" id="footer-title-methodology"></div>
         <p id="footer-methodology"></p>
-        <div class="caption" id="footer-title-tech"></div>
-        <p id="footer-tech"></p>
         <div class="caption" id="footer-title-sources"></div>
         <p id="footer-sources"></p>
       </div>
@@ -111,7 +122,7 @@
         number: 24,
         sizeRange: { min: 12, max: 26 },
         color: '#424992',
-        exclusionZonesIds: ['dataStory', 'alertText', 'legend-2'],
+        exclusionZonesIds: ['dataStory', 'alertText'],
       };
 
       const paramsOutro = {
@@ -147,9 +158,9 @@
 
         endingSketch =
           endingSketch ||
-          new p5((p) => outro(p, 'ending-canvas', 30), 'ending-canvas');
+          new p5((p) => outro(p, 'ending-canvas', 50), 'ending-canvas');
         legendSketch =
-          legendSketch || new p5((p) => legend2(p, 'legend-2', 7), 'legend-2');
+          legendSketch || new p5((p) => legend(p, 'legend', 7), 'legend');
       }
 
       sketchCompleted();

@@ -40,7 +40,7 @@ font-style: normal;
   background-color: #fff; /* Line color */
 }
 
-.bird, .birdChild, .birdOneWing {
+.bird, .birdChild, .birdOneWing, .birdBlue{
   position: relative;
   padding-left: 1.5rem; /* Space for the bird image */
   display: inline-block;
@@ -57,6 +57,19 @@ font-style: normal;
   width: 1.5rem; /* Width of the bird image */
   height: 1.5rem; /* Height of the bird image */
   background-image: url('./assets/images/bird-2.svg'); /* Path to the bird image */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.birdBlue::before {
+  content: '';
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 60%;
+  transform: translateY(-60%);
+  width: 1.5rem; /* Width of the bird image */
+  height: 1.5rem; /* Height of the bird image */
+  background-image: url('./assets/images/birdBlue.svg'); /* Path to the bird image */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -206,7 +219,8 @@ body {
 
 #one {
   width: 100%;
-  margin: 2rem!important;
+  margin: 1rem!important;
+  margin-bottom: 0.4rem!important;
   width: -webkit-fill-available;
   position: relative;
   height: auto;
@@ -370,9 +384,11 @@ a{
   cursor: pointer;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-family: "calluna-sans", sans-serif;
+  font-weight: 300;
   color: #202297;
+
 }
 
 .hand-drawn-underline::after {
@@ -394,10 +410,9 @@ a{
   position: absolute;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: calc(100vh + 500px);
   width: 100vw;
   pointer-events: none;
-
 }
 
 .scroll{
@@ -435,9 +450,9 @@ a{
 
 .how-to-read {
   width: 100%;
+  height: 360px;
   display: flex;
   position: relative;
-  height: 60vh;
   max-height: 800px;
 
     align-items: center;
@@ -467,9 +482,43 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#legend-2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 612px;
+    margin: 5rem auto 3rem auto;
+    padding: 5rem 2rem;
+}
+
+
+#legend-2 .birdChild::before{
+transform: translate(-30%, -30%);
+}
+#legend-2 .birdBlue::before{
+transform: translate(20%, -50%);
+}
+
+#legend-2 canvas{
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+
 .how-to-read #legend .note {
   position: absolute;
   font-size: 18px;
+
+}
+#legend-2 .note {
+  display: flex;
+  align-items: center;
+  color: #202297;;
+  font-family: "calluna", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1.8;
 }
 
 #legendNote01{
@@ -558,11 +607,18 @@ font-style: normal;
 }
 
 
+#buttons{
+  display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+}
+
 @media only screen and (max-width: 712px) {
 
 #buttons{
   display: none;
 }
+
 
 #grid{
   display: grid;
