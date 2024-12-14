@@ -185,7 +185,7 @@ let sketchOne = function (p) {
       p.image(img, 0, y, p.width, scaledHeight);
 
       // Update y-coordinate for the next image
-      y += scaledHeight - 10; // Subtract 5 for overlap if needed, ensuring it's rounded
+      y += scaledHeight - 20; // Subtract 5 for overlap if needed, ensuring it's rounded
     });
 
     // Draw main birds
