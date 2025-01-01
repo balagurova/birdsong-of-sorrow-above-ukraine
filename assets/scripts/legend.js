@@ -58,7 +58,7 @@ let legend = function (p, containerId, n) {
       } while (isOverlapping);
 
       // Choose bird color
-      const birdColor = birdsDrawn < lightBlueBirds ? '#7B86FF' : '#fff'; // Light blue for first 2 birds, white for others
+      const birdColor = birdsDrawn < lightBlueBirds ? '#7B86FF' : '#424992'; // Light blue for first 2 birds, white for others
 
       // Draw the bird
       p.noStroke();

@@ -1,4 +1,4 @@
-let sketchOne = function (p) {
+let oneSketch = function (p) {
   let monthHeight = 400;
   const xPadding = 30; // Padding from the left and right edges
   let font, csvData;
@@ -22,7 +22,7 @@ let sketchOne = function (p) {
   };
 
   p.setup = function () {
-    let canvasHeight = monthHeight * months.length;
+    let canvasHeight = monthHeight * csvData.rows.length;
 
     // Get the div with ID 'one'
     let container = document.getElementById('one');
@@ -39,6 +39,7 @@ let sketchOne = function (p) {
     initializeBirds();
 
     p.noLoop();
+    document.dispatchEvent(new Event('oneSketchLoaded'));
   };
 
   // Check if a point is inside a rectangular zone
@@ -233,4 +234,4 @@ let sketchOne = function (p) {
   };
 };
 
-window.p5Instance = new p5(sketchOne, 'one');
+window.p5Instance = new p5(oneSketch, 'one');

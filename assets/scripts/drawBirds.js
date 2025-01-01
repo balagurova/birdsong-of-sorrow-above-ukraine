@@ -10,7 +10,7 @@ let drawBirds = function (p, containerId, params) {
     const canvasContainer = document.getElementById(containerId);
     const canvasWidth = canvasContainer.clientWidth;
     const canvasHeight = canvasContainer.clientHeight;
-    p.createCanvas(canvasWidth, canvasHeight, p.SVG);
+    p.createCanvas(canvasWidth, canvasHeight);
 
     // Dynamically get exclusion zones' parameters from IDs
     params.exclusionZones = exclusionZonesIds
@@ -26,10 +26,8 @@ let drawBirds = function (p, containerId, params) {
             h: rect.height,
           };
 
-          console.log(`Exclusion zone for ID "${id}":`, exclusionZone);
           return exclusionZone;
         }
-        console.warn(`Element with ID "${id}" not found.`);
         return null;
       })
       .filter(Boolean); // Remove null values
