@@ -135,9 +135,9 @@
 
     function sketchCompleted() {
       if (sketchesCompleted) return;
-      sketchesCompleted = true;
 
       setTimeout(() => {
+        sketchesCompleted = true;
         document.getElementById('loadingScreen').style.display = 'none';
 
         endingSketch =
