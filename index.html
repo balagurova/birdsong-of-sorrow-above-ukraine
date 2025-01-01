@@ -11,7 +11,7 @@
       <p class="caption">Loading...</p>
     </div>
 
-    <div id="mainContent" class="content" style="visibility: hidden">
+    <div id="mainContent" class="content" style="display: hidden">
       <section class="hero">
         <div id="alert-canvas"></div>
         <p class="caption" id="dataStory"></p>
@@ -84,7 +84,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <!-- <script src="./assets/scripts/legend.js"></script> -->
-  <script src="./assets/translations/translation.json"></script>
   <script src="./assets/scripts/main.js"></script>
   <script src="./assets/scripts/one.js"></script>
   <script src="./assets/scripts/labels.js"></script>
@@ -98,7 +97,7 @@
       // Hide the loading screen
       document.getElementById('loadingScreen').style.display = 'none';
       // Show the main content
-      document.getElementById('mainContent').style.visibility = 'visible';
+      document.getElementById('mainContent').style.display = 'flex';
       // Initialize other sketches if necessary
       initializeOtherSketches();
     }
@@ -108,8 +107,6 @@
 
     // Function to initialize other sketches
     function initializeOtherSketches() {
-      let sketchesCompleted = false;
-
       let alertSketch, endingSketch, footerSketch, legendSketch;
 
       const paramsIntro = {
@@ -155,7 +152,7 @@
         console.error('Loading timed out.');
         // You can hide the loading screen or show an error message here
         document.getElementById('loadingScreen').style.display = 'none';
-        document.getElementById('mainContent').style.visibility = 'visible';
+        document.getElementById('mainContent').style.display = 'flex';
       }
     }, 5000); // 15 seconds timeout
 

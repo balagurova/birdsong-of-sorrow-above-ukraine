@@ -190,6 +190,16 @@ async function initializeGrid() {
   });
 }
 
+// Monitor the grid's display property
+const observer = new MutationObserver(() => {
+  if (window.getComputedStyle(grid).display !== 'none') {
+    console.log('Grid is now displayed. Initializing sketches...');
+    initializeGrid(); // Call grid initialization
+  }
+});
+
+observer.observe(grid, { attributes: true, attributeFilter: ['style'] });
+
 // Initialize grid if it is already visible
 if (window.getComputedStyle(grid).display !== 'none') {
   initializeGrid();
