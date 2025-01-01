@@ -39,7 +39,6 @@ let oneSketch = function (p) {
     initializeBirds();
 
     p.noLoop();
-    document.dispatchEvent(new Event('oneSketchLoaded'));
   };
 
   // Check if a point is inside a rectangular zone
@@ -232,6 +231,7 @@ let oneSketch = function (p) {
     initializeBirds();
     p.redraw();
   };
+  document.dispatchEvent(new Event('oneSketchLoaded'));
 };
 
 window.p5Instance = new p5(oneSketch, 'one');
