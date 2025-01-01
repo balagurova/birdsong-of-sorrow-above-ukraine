@@ -133,20 +133,22 @@
         'footer-canvas'
       );
 
-    endingSketch =
-      endingSketch ||
-      new p5((p) => outro(p, 'ending-canvas', 30), 'ending-canvas');
-
     function sketchCompleted() {
       if (sketchesCompleted) return;
       sketchesCompleted = true;
 
-      document.getElementById('loadingScreen').style.display = 'none';
+      setTimeout(() => {
+        document.getElementById('loadingScreen').style.display = 'none';
 
-      legendSketch =
-        legendSketch || new p5((p) => legend2(p, 'legend-2', 7), 'legend-2');
+        endingSketch =
+          endingSketch ||
+          new p5((p) => outro(p, 'ending-canvas', 30), 'ending-canvas');
 
-      // Reuse or create sketches
+        legendSketch =
+          legendSketch || new p5((p) => legend2(p, 'legend-2', 7), 'legend-2');
+
+        // Reuse or create sketches
+      }, 3000);
     }
 
     sketchCompleted();
