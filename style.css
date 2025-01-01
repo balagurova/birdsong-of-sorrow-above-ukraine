@@ -3,6 +3,30 @@ html, body {
   font-size: 1rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color:  #F9EFE9;
+  /* background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png"); */
+  
+  /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
+/* background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); */
+  /* background-image: url("https://www.transparenttextures.com/patterns/embossed-paper.png"); */
+  color: #202297;
+}
+
 .month-label{
   z-index: 10;
   position: absolute;
@@ -18,16 +42,22 @@ font-style: normal;
     letter-spacing: 0.03rem;
 }
 
+
+#mainContent{
+  max-width: 1980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
 .hero{
   padding: 0 1.5rem;
   position: relative;
   max-height: 1200px;
+  height: 100vh;
 }
 
-#mainContent{
-  max-width: 1980px;
-    margin: 0 auto;
-}
 
 .month-label::before {
   content: '';
@@ -107,6 +137,7 @@ font-style: normal;
   line-height: 1.4;
   font-family: "calluna", serif;
   text-rendering: geometricPrecision;
+  font-style: normal;
 }
 
 
@@ -145,14 +176,7 @@ font-style: normal;
 /* Hide SVG containers initially */
 
 
-#ending-canvas{
-  height: 500px;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 48px;
-  justify-content:  flex-end;
-}
+
 
 footer{
   display: flex;
@@ -193,6 +217,24 @@ footer a {
 #ending{
   text-align: right;
   max-width: 300px;
+  margin-right: 10px;
+}
+
+#ending-canvas{
+  min-height: 512px;
+  min-width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+}
+
+#endingSection{
+  min-height: 512px;
+  position: relative;
+  display: flex;
+  justify-content:  center;
+  align-items: flex-end;
 }
 
 #ending-canvas canvas{
@@ -210,17 +252,9 @@ footer a {
   box-sizing: border-box;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "callina-sans", sans-serif;
-  font-family: "calluna", serif;
-  font-style: italic;
-}
 
 #one {
   width: 100%;
-  margin: 1rem!important;
   margin-bottom: 0.4rem!important;
   width: -webkit-fill-available;
   position: relative;
@@ -268,24 +302,8 @@ body {
 }
 
  
-body{
-  background-color:  #F9EFE9;
-  /* background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png"); */
-  
-  /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
-/* background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/embossed-paper.png"); */
-  color: #202297;
-}
 
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 
 
@@ -314,18 +332,29 @@ line-height: 1.4;
 }
 
 section{
-  max-width: 1440px;
-  height: 100vh;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%; 
+  box-sizing: border-box; 
   display: flex; 
   flex-direction: column; 
   justify-content: center;
   align-items: center;
 }
 
+
+#legend-2 .note:nth-child(1) { margin-left: 64px; }
+#legend-2 .note:nth-child(2) { margin-left: 96px; }
+#legend-2 .note:nth-child(3) { margin-left: 148px; }
+#legend-2 .note:nth-child(4) { margin-left: 300px; }
+#legend-2 .note:nth-child(5) { margin-left: 360px; }
+#legend-2 .note:nth-child(6) { margin-left: 250px; }
+
 .caption{
   text-transform: uppercase;
   font-size: 14px;
   font-family: "calluna-sans", sans-serif;
+  font-style: normal;
 }
 
 a{
@@ -516,8 +545,8 @@ transform: translate(20%, -50%);
   align-items: center;
   color: #202297;;
   font-family: "calluna", serif;
+  font-style: normal;
     font-weight: 300;
-    font-style: normal;
     font-size: 1.25rem;
     line-height: 1.8;
 }
@@ -533,6 +562,8 @@ transform: translate(20%, -50%);
 
 
 /* grid */
+
+
 
 #grid {
   gap: 1rem;
@@ -642,7 +673,6 @@ font-style: normal;
  }
 
  #one{
-  margin: 1rem!important;
   background-color: #424992;
  }
 

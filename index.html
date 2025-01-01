@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cig3amv.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="./assets/translations/translation.json"></script>
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/bird.js"></script>
-    <script src="./assets/scripts/outro.js"></script>
+    <script src="./assets/scripts/drawBirds.js"></script>
   </head>
   <body>
     <div id="loadingScreen">
@@ -15,8 +17,8 @@
     </div>
 
     <div id="mainContent" class="content">
-      <div id="alert-canvas"></div>
       <section class="hero">
+        <div id="alert-canvas"></div>
         <p class="caption" id="dataStory"></p>
         <h1 id="title"></h1>
         <p id="alertText"></p>
@@ -37,154 +39,148 @@
           </svg>
         </div>
       </section>
+      <section id="visualisation">
+        <div id="legend-2">
+          <div class="note">Each bird<span class="birdBlue"></span></div>
+          <div class="note">represents a life</div>
+          <div class="note">lost.</div>
+          <div class="note"><span class="birdChild"></span>Light blue</div>
+          <div class="note">signifies children</div>
+          <div class="note">among the losses.</div>
+        </div>
+        <div id="buttons">
+          <button
+            id="btnOne"
+            class="btn-segment active underline-animation hand-drawn-underline"
+            onclick="switchScript('one')"
+          >
+            All at Once
+          </button>
+          <button
+            id="btnGrid"
+            class="btn-segment"
+            onclick="switchScript('grid')"
+          >
+            Month by month
+          </button>
+        </div>
+        <div id="grid"></div>
+        <div id="one"><div id="stories"></div></div>
+      </section>
+      <section id="endingSection">
+        <p id="ending"></p>
+        <div id="ending-canvas"></div>
+      </section>
+      <footer>
+        <div class="footerArea">
+          <div class="caption" id="footer-title-author-note"></div>
+          <p id="footer-author-note"></p>
+          <div class="caption" id="footer-title-methodology"></div>
+          <p id="footer-methodology"></p>
+          <div class="caption" id="footer-title-tech"></div>
+          <p id="footer-tech"></p>
+          <div class="caption" id="footer-title-sources"></div>
+          <p id="footer-sources"></p>
+        </div>
+        <div id="footer-canvas"></div>
+      </footer>
     </div>
-      <div id="legend-2">
-        <div class="note" style="margin-left: 64px">Each bird<span class="birdBlue"></span></div>
-        <div class="note" style="margin-left: 96px">represents a life</div>
-        <div class="note" style="margin-left: 148px">lost.</div>
-        <div class="note" style="margin-left: 300px"><span class="birdChild"></span>Light blue</div>
-        <div class="note" style="margin-left: 360px">signifies children</div>
-        <div class="note" style="margin-left: 250px">among the losses.</div>
-      </div>
-      <div id="buttons">
-        <button
-          id="btnOne"
-          class="btn-segment active underline-animation hand-drawn-underline"
-          onclick="switchScript('one')"
-        >
-          All at Once
-        </button>
-        <button id="btnGrid" class="btn-segment" onclick="switchScript('grid')">
-          Month by month
-        </button>
-      </div>
-      <div id="grid"></div>
-      <div id="one"><div id="stories"></div></div>
-    </div>
-    <div id="ending-canvas"><p id="ending"></p></div>
-    <footer>
-      <div class="footerArea">
-        <div class="caption" id="footer-title-author-note"></div>
-        <p id="footer-author-note"></p>
-        <div class="caption" id="footer-title-methodology"></div>
-        <p id="footer-methodology"></p>
-        <div class="caption" id="footer-title-tech"></div>
-        <p id="footer-tech"></p>
-        <div class="caption" id="footer-title-sources"></div>
-        <p id="footer-sources"></p>
-      </div>
-      <div id="footer-canvas"></div>
-    </footer>
-
-    <!-- Include p5.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-
-    <!-- Include the sketch scripts -->
-    <script src="./assets/translations/translation.json"></script>
-    <script>
-      if (window.innerWidth > 768) {
-        // Load labels.js
-        const labelsScript = document.createElement('script');
-        labelsScript.src = './assets/scripts/labels.js';
-        document.body.appendChild(labelsScript);
-
-        // Load one.js
-        const oneScript = document.createElement('script');
-        oneScript.type = 'module'; // Specify that it's a module script
-        oneScript.src = './assets/scripts/one.js';
-        document.body.appendChild(oneScript);
-      }
-    </script>
-    <script src="./assets/scripts/grid.js"></script>
-    <script src="./assets/scripts/drawBirds.js"></script>
-
-    <script>
-      // Check if the device is not mobile (adjust the breakpoint as needed)
-
-      let sketchesCompleted = false;
-      let icount = 0;
-
-      let alertSketch, endingSketch, footerSketch, legendSketch;
-
-      // Example usage:
-      const paramsIntro = {
-        number: 24,
-        sizeRange: { min: 12, max: 26 },
-        color: '#424992',
-        exclusionZonesIds: ['dataStory', 'alertText', 'legend-2'],
-      };
-
-      const paramsOutro = {
-        number: 3,
-        sizeRange: { min: 17, max: 26 },
-        color: '#424992',
-        exclusionZonesIds: [],
-      };
-
-      setTimeout(() => {
-        // console.log(document.getElementById('dataStory').getBoundingClientRect());
-        alertSketch =
-          alertSketch ||
-          new p5(
-            (p) => drawBirds(p, 'alert-canvas', paramsIntro),
-            'alert-canvas'
-          );
-        footerSketch =
-          footerSketch ||
-          new p5(
-            (p) => drawBirds(p, 'footer-canvas', paramsOutro),
-            'footer-canvas'
-          );
-      }, 2000);
-
-      function sketchCompleted() {
-        if (sketchesCompleted) return;
-        sketchesCompleted = true;
-
-        document.getElementById('loadingScreen').style.display = 'none';
-
-        // Reuse or create sketches
-
-        endingSketch =
-          endingSketch ||
-          new p5((p) => outro(p, 'ending-canvas', 30), 'ending-canvas');
-        legendSketch =
-          legendSketch || new p5((p) => legend2(p, 'legend-2', 7), 'legend-2');
-      }
-
-      sketchCompleted();
-
-      // Tab switcher
-
-      function switchScript(script) {
-        const oneElement = document.getElementById('one');
-        const gridElement = document.getElementById('grid');
-        const endingElement = document.getElementById('ending-canvas');
-        const btnGrid = document.getElementById('btnGrid');
-        const btnOne = document.getElementById('btnOne');
-
-        const classesToToggle = [
-          'active',
-          'underline-animation',
-          'hand-drawn-underline',
-        ];
-
-        if (script === 'grid') {
-          gridElement.style.display = 'grid';
-          oneElement.style.display = 'none';
-          endingElement.style.marginTop = '-500px';
-
-          classesToToggle.forEach((cls) => btnGrid.classList.add(cls));
-          classesToToggle.forEach((cls) => btnOne.classList.remove(cls));
-        } else if (script === 'one') {
-          gridElement.style.display = 'none';
-          oneElement.style.display = 'block';
-          endingElement.style.marginTop = '0px';
-
-          classesToToggle.forEach((cls) => btnGrid.classList.remove(cls));
-          classesToToggle.forEach((cls) => btnOne.classList.add(cls));
-        }
-      }
-    </script>
   </body>
+
+  <script src="./assets/scripts/grid.js"></script>
+  <script src="./assets/scripts/outro.js"></script>
+
+  <script>
+    if (window.innerWidth > 768) {
+      // Load labels.js
+      const labelsScript = document.createElement('script');
+      labelsScript.src = './assets/scripts/labels.js';
+      document.body.appendChild(labelsScript);
+
+      // Load one.js
+      const oneScript = document.createElement('script');
+      oneScript.type = 'module';
+      oneScript.src = './assets/scripts/one.js';
+      document.body.appendChild(oneScript);
+    }
+
+    let sketchesCompleted = false;
+    let icount = 0;
+
+    let alertSketch, endingSketch, footerSketch, legendSketch;
+
+    const paramsIntro = {
+      number: 24,
+      sizeRange: { min: 12, max: 26 },
+      color: '#424992',
+      exclusionZonesIds: ['dataStory', 'alertText', 'legend-2'],
+    };
+
+    const paramsOutro = {
+      number: 3,
+      sizeRange: { min: 17, max: 26 },
+      color: '#424992',
+      exclusionZonesIds: [],
+    };
+
+    alertSketch =
+      alertSketch ||
+      new p5((p) => drawBirds(p, 'alert-canvas', paramsIntro), 'alert-canvas');
+    footerSketch =
+      footerSketch ||
+      new p5(
+        (p) => drawBirds(p, 'footer-canvas', paramsOutro),
+        'footer-canvas'
+      );
+
+    endingSketch =
+      endingSketch ||
+      new p5((p) => outro(p, 'ending-canvas', 30), 'ending-canvas');
+
+    function sketchCompleted() {
+      if (sketchesCompleted) return;
+      sketchesCompleted = true;
+
+      document.getElementById('loadingScreen').style.display = 'none';
+
+      legendSketch =
+        legendSketch || new p5((p) => legend2(p, 'legend-2', 7), 'legend-2');
+
+      // Reuse or create sketches
+    }
+
+    sketchCompleted();
+
+    // Tab switcher
+
+    function switchScript(script) {
+      const oneElement = document.getElementById('one');
+      const gridElement = document.getElementById('grid');
+      const endingElement = document.getElementById('ending-canvas');
+      const btnGrid = document.getElementById('btnGrid');
+      const btnOne = document.getElementById('btnOne');
+
+      const classesToToggle = [
+        'active',
+        'underline-animation',
+        'hand-drawn-underline',
+      ];
+
+      if (script === 'grid') {
+        gridElement.style.display = 'grid';
+        oneElement.style.display = 'none';
+        endingElement.style.marginTop = '-500px';
+
+        classesToToggle.forEach((cls) => btnGrid.classList.add(cls));
+        classesToToggle.forEach((cls) => btnOne.classList.remove(cls));
+      } else if (script === 'one') {
+        gridElement.style.display = 'none';
+        oneElement.style.display = 'block';
+        endingElement.style.marginTop = '0px';
+
+        classesToToggle.forEach((cls) => btnGrid.classList.remove(cls));
+        classesToToggle.forEach((cls) => btnOne.classList.add(cls));
+      }
+    }
+  </script>
 </html>
