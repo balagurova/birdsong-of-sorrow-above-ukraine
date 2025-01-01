@@ -84,11 +84,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <!-- <script src="./assets/scripts/legend.js"></script> -->
+  <script src="./assets/scripts/bird.js"></script>
+  <script src="./assets/scripts/drawBirds.js"></script>
   <script src="./assets/scripts/main.js"></script>
   <script src="./assets/scripts/one.js"></script>
   <script src="./assets/scripts/labels.js"></script>
-  <script src="./assets/scripts/bird.js"></script>
-  <script src="./assets/scripts/drawBirds.js"></script>
   <script src="./assets/scripts/grid.js"></script>
   <script src="./assets/scripts/outro.js"></script>
 
@@ -147,14 +147,14 @@
       // If you have other asynchronous tasks, handle them here
     }
 
-    setTimeout(() => {
-      if (document.getElementById('loadingScreen').style.display !== 'none') {
-        console.error('Loading timed out.');
-        // You can hide the loading screen or show an error message here
-        document.getElementById('loadingScreen').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'flex';
-      }
-    }, 5000); // 15 seconds timeout
+    // setTimeout(() => {
+    //   if (document.getElementById('loadingScreen').style.display !== 'none') {
+    //     console.error('Loading timed out.');
+    //     // You can hide the loading screen or show an error message here
+    //     document.getElementById('loadingScreen').style.display = 'none';
+    //     document.getElementById('mainContent').style.display = 'flex';
+    //   }
+    // }, 5000); // 15 seconds timeout
 
     function switchScript(script) {
       const oneElement = document.getElementById('one');

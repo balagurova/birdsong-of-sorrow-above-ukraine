@@ -199,6 +199,7 @@ let oneSketch = function (p) {
       }
     }
 
+    document.dispatchEvent(new Event('oneSketchLoaded'));
     // Draw exclusion zones and buffer zones for debugging
     exclusionZones.forEach((zone) => {
       // Main exclusion zone
@@ -231,7 +232,6 @@ let oneSketch = function (p) {
     initializeBirds();
     p.redraw();
   };
-  document.dispatchEvent(new Event('oneSketchLoaded'));
 };
 
 window.p5Instance = new p5(oneSketch, 'one');
