@@ -11,8 +11,8 @@ let sketchBrush = function (p) {
     const containerWidth = container.offsetWidth;
     const containerHeight = container.offsetHeight;
 
-    p.createCanvas(1626, 400, p.WEBGL);
-    p.pixelDensity(1);
+    p.createCanvas(720, 400, p.WEBGL);
+    p.pixelDensity(4);
     brush.load();
 
     let saveButton = p.createButton('Save Canvas');
@@ -25,29 +25,27 @@ let sketchBrush = function (p) {
     p.translate(-p.width / 2, -p.height / 2);
 
     // Set up brush
-    brush.pick('2B');
+    brush.pick('hatch_brush');
     brush.stroke('#424992');
-    brush.strokeWeight(0.2);
+    brush.strokeWeight(1);
 
-    const spacing = 1; // Line spacing
-    const padding = 20; // Padding at the top and bottom of the canvas
+    const spacing = 0.05; // Line spacing
+    const padding = 0; // Padding at the top and bottom of the canvas
 
-    for (let i = padding; i < p.height - padding; i += spacing) {
+    for (let i = padding; i < p.height - 10; i += spacing) {
       // Skip some lines with a low probability to create gaps
-      if (p.random(1) < 0.1) {
+      if (p.random(1) < 0.3) {
         continue;
       }
 
       let xStart, xEnd;
-
-      // Apply more randomness for lines in the top and bottom regions
 
       // Standard randomness for lines in the middle region
       xStart = p.random(0, 10);
       xEnd = p.width - p.random(0, 10);
 
       let yStartOffset = 0;
-      let yEndOffset = 0;
+      let yEndOffset = -5;
 
       // Add vertical randomness with a lower probability
       if (p.random(1) < 0.3) {

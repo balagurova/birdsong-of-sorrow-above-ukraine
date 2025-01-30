@@ -16,14 +16,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-color:  #F9EFE9;
-  /* background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png"); */
-  
-  /* background-image: url("https://www.transparenttextures.com/patterns/notebook.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); */
-/* background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/embossed-paper.png"); */
+  background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
   color: #202297;
 }
 
@@ -314,7 +307,7 @@ font-size: 12.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: 160px; 
-margin-bottom: 1.5rem;
+margin-bottom: 3rem;
 margin-top: 64px;
 }
 
@@ -574,6 +567,16 @@ transform: translate(20%, -50%);
   width: 100%;
   display: none;
 }
+#grid2 {
+  gap: 1rem;
+  row-gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1980px;
+}
+
 
 .grid-cell {
   display: flex;
