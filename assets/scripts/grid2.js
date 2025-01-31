@@ -106,8 +106,7 @@ fetch('./assets/translations/translation.json')
                 y >= zone.y &&
                 y <= zone.y + zone.height
             );
-            if (inside) console.log(`❌ Bird blocked at (${x}, ${y})`);
-            return inside;
+            if (inside) return inside;
           }
 
           p.setup = function () {

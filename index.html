@@ -90,6 +90,27 @@
       </footer>
     </div>
   </body>
+  <script>
+    const canvasHeight = 13200;
+    const cell = document.getElementById('one');
+    const getImageResolution = () => {
+      const canvasW = cell.clientWidth;
+      console.log(canvasW);
+      if (canvasW < 720) {
+        return 300;
+      } else if (canvasW < 1024) {
+        return 720;
+      } else if (canvasW < 1600) {
+        return 1024;
+      } else {
+        return 1600;
+      }
+    };
+
+    backgroundUrl = `./assets/images/bg/f-${getImageResolution()}.png`;
+    cell.style.backgroundImage = `url('${backgroundUrl}')`;
+    cell.style.backgroundSize = 'cover';
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <!-- <script src="./assets/scripts/legend.js"></script> -->
