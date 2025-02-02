@@ -1,5 +1,5 @@
 let oneSketch = function (p) {
-  let monthHeight = 400;
+  let MONTH_HEIGHT = 400;
   const xPadding = 30;
   let font, csvData;
   let birds = [];
@@ -22,7 +22,7 @@ let oneSketch = function (p) {
   };
 
   p.setup = function () {
-    let canvasHeight = monthHeight * csvData.rows.length;
+    let canvasHeight = MONTH_HEIGHT * csvData.rows.length;
 
     let container = document.getElementById('one');
     if (container) {
@@ -72,17 +72,17 @@ let oneSketch = function (p) {
 
   function initializeBirds() {
     birds = [];
-    const topConstraint = monthHeight * 0.8;
+    const topConstraint = MONTH_HEIGHT * 0.8;
     for (let i = 0; i < months.length; i++) {
       const totalBirds = p.int(csvData.getString(i, 'Killed')) || 0;
       const childrenKilled =
         p.int(csvData.getString(i, 'Children Killed')) || 0;
       const highlightCount = p.int(csvData.getString(i, 'Highlighted')) || 0;
-      const lowerLimit = i === 0 ? topConstraint : monthHeight * i;
+      const lowerLimit = i === 0 ? topConstraint : MONTH_HEIGHT * i;
       const upperLimit =
         i === months.length - 1
-          ? lowerLimit + monthHeight * 0.9
-          : lowerLimit + monthHeight;
+          ? lowerLimit + MONTH_HEIGHT * 0.9
+          : lowerLimit + MONTH_HEIGHT;
 
       const yRangeCenter = (lowerLimit + upperLimit) / 2;
       const yRangeDeviation = (upperLimit - lowerLimit) / 4;
