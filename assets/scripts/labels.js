@@ -5,7 +5,6 @@ fetch('./assets/translations/translation.json')
     const notesData = translationData[language]?.notes || [];
     const monthsData = translationData[language]?.months || [];
     const container = document.getElementById('stories');
-
     const MONTH_HEIGHT = 400;
     const TOP_PADDING = 24;
 
@@ -124,7 +123,7 @@ fetch('./assets/translations/translation.json')
       container.appendChild(storyElement);
     });
   })
-  .then(() => drawMyBirds())
+  .then(() => drawMyBirds2())
   .catch((error) => {
     console.error('Error loading translation data:', error);
   });
